@@ -135,7 +135,7 @@
                     <a href="#" class="nav__link">Возврат</a>
                     <a href="#" class="nav__link">Корпоративным клиентам</a>
                     <div class="header__actions">
-                        <a href="#" class="header__action">
+                        <button href="#" class="header__action search-btn">
                             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_3013_4008)">
                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7911 23.9346C19.4926 25.8154 16.5545 26.9439 13.3528 26.9439C5.98905 26.9439 0.0195312 20.9744 0.0195312 13.6106C0.0195312 6.24686 5.98905 0.277344 13.3528 0.277344C20.7166 0.277344 26.6861 6.24686 26.6861 13.6106C26.6861 16.8123 25.5576 19.7505 23.6767 22.049L27.6289 26.0012C28.1496 26.5219 28.1496 27.3661 27.6289 27.8868C27.1082 28.4075 26.264 28.4075 25.7433 27.8868L21.7911 23.9346ZM24.0194 13.6106C24.0194 19.5016 19.2438 24.2773 13.3528 24.2773C7.4618 24.2773 2.68619 19.5016 2.68619 13.6106C2.68619 7.71961 7.4618 2.944 13.3528 2.944C19.2438 2.944 24.0194 7.71961 24.0194 13.6106Z" fill="#453C3C" />
@@ -146,7 +146,7 @@
                                   </clipPath>
                                 </defs>
                               </svg>   
-                        </a>
+                        </button>
                         <a href="#" class="header__action">
                             <span>1</span>
                             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,13 +160,13 @@
                                 </defs>
                               </svg>   
                         </a>
-                        <a href="#" class="header__action">
+                        <a href="#" class="header__action cart-btn">
                             <span>1</span>
                             <svg width="26" height="29" viewBox="0 0 26 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.74645 6.64098C6.74645 3.12644 9.59555 0.277344 13.1101 0.277344C16.6246 0.277344 19.4737 3.12644 19.4737 6.64098H22.0192C24.1279 6.64098 25.8374 8.35044 25.8374 10.4592V21.9137C25.8374 25.4282 22.9883 28.2773 19.4737 28.2773H6.74645C3.23191 28.2773 0.382812 25.4282 0.382812 21.9137V10.4592C0.382812 8.35044 2.09227 6.64098 4.20099 6.64098H6.74645ZM9.2919 6.64098C9.2919 4.53226 11.0014 2.8228 13.1101 2.8228C15.2188 2.8228 16.9283 4.53226 16.9283 6.64098H9.2919ZM6.74645 9.18643V13.0046C6.74645 13.7075 7.31627 14.2773 8.01918 14.2773C8.72208 14.2773 9.2919 13.7075 9.2919 13.0046V9.18643H16.9283V13.0046C16.9283 13.7075 17.4981 14.2773 18.201 14.2773C18.9039 14.2773 19.4737 13.7075 19.4737 13.0046V9.18643H22.0192C22.7221 9.18643 23.2919 9.75625 23.2919 10.4592V21.9137C23.2919 24.0224 21.5824 25.7319 19.4737 25.7319H6.74645C4.63773 25.7319 2.92827 24.0224 2.92827 21.9137V10.4592C2.92827 9.75625 3.49809 9.18643 4.20099 9.18643H6.74645Z" fill="#453C3C" />
                               </svg>   
                         </a>
-                        <a href="#" class="header__action">
+                        <a href="#" class="header__action open-authorization">
                             <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_3013_4018)">
                                   <path fill-rule="evenodd" clip-rule="evenodd" d="M22.0189 8.27734C22.0189 12.6956 18.4372 16.2773 14.0189 16.2773C9.6006 16.2773 6.01888 12.6956 6.01888 8.27734C6.01888 3.85907 9.6006 0.277344 14.0189 0.277344C18.4372 0.277344 22.0189 3.85907 22.0189 8.27734ZM19.3522 8.27734C19.3522 11.2229 16.9644 13.6107 14.0189 13.6107C11.0734 13.6107 8.68555 11.2229 8.68555 8.27734C8.68555 5.33183 11.0734 2.94401 14.0189 2.94401C16.9644 2.94401 19.3522 5.33183 19.3522 8.27734Z" fill="#453C3C" />
@@ -179,6 +179,76 @@
                                 </defs>
                               </svg>  
                         </a>
+                    </div>
+                    <div class="search">
+                        <div class="search__wrap">
+                            <div class="search-close">
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.15339 0.643457C1.66524 0.155306 0.873795 0.155306 0.385644 0.643457C-0.102506 1.13161 -0.102506 1.92306 0.385644 2.41121L8.25178 10.2773L0.385645 18.1435C-0.102506 18.6316 -0.102506 19.4231 0.385645 19.9112C0.873795 20.3994 1.66524 20.3994 2.15339 19.9112L10.0195 12.0451L17.8855 19.911C18.3736 20.3992 19.1651 20.3992 19.6532 19.911C20.1414 19.4229 20.1414 18.6314 19.6532 18.1433L11.7873 10.2773L19.6532 2.4114C20.1414 1.92325 20.1414 1.1318 19.6532 0.643646C19.1651 0.155495 18.3736 0.155495 17.8855 0.643646L10.0195 8.50959L2.15339 0.643457Z" fill="#453C3C" />
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="Поиск">
+                            <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_598)">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M21.7911 23.9346C19.4926 25.8154 16.5545 26.9439 13.3528 26.9439C5.98905 26.9439 0.0195312 20.9744 0.0195312 13.6106C0.0195312 6.24686 5.98905 0.277344 13.3528 0.277344C20.7166 0.277344 26.6861 6.24686 26.6861 13.6106C26.6861 16.8123 25.5576 19.7505 23.6767 22.049L27.6289 26.0012C28.1496 26.5219 28.1496 27.3661 27.6289 27.8868C27.1082 28.4075 26.264 28.4075 25.7433 27.8868L21.7911 23.9346ZM24.0194 13.6106C24.0194 19.5016 19.2438 24.2773 13.3528 24.2773C7.4618 24.2773 2.68619 19.5016 2.68619 13.6106C2.68619 7.71961 7.4618 2.944 13.3528 2.944C19.2438 2.944 24.0194 7.71961 24.0194 13.6106Z" fill="#453C3C" />
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_2_598">
+                                    <rect width="28" height="28" fill="white" transform="translate(0.0195312 0.277344)" />
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                        </div>
+                        <div class="search__recomendations">
+                            <div class="search__recomendations-wrapper">
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                                <div class="search__recomendations-item">
+                                    <img src="./images/search.png" alt="">
+                                    <div class="search__recomendations-name">Букет из светло-персиковых кустовых роз Павлова</div>
+                                    <div class="price">4290 <span>₽</span></div>
+                                </div>
+                            </div>
+                            <button class="all">
+                                Показать все результаты
+                                <svg width="24" height="13" viewBox="0 0 24 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.5706 4.25376L18.8919 0.556485C18.7141 0.377751 18.4729 0.277344 18.2214 0.277344C17.97 0.277344 17.7288 0.377751 17.5509 0.556485C17.3731 0.735273 17.2733 0.97773 17.2733 1.23054C17.2733 1.48334 17.3731 1.7258 17.5509 1.90459L20.9224 5.29582H1.58899C1.33747 5.29582 1.09625 5.39627 0.918395 5.57507C0.740542 5.75386 0.640625 5.99636 0.640625 6.24922H0.640625C0.640625 6.50208 0.740542 6.74458 0.918395 6.92337C1.09625 7.10217 1.33747 7.20262 1.58899 7.20262H20.9802L17.5509 10.6491C17.4628 10.7377 17.3928 10.8428 17.3451 10.9586C17.2974 11.0743 17.2728 11.1984 17.2728 11.3237C17.2728 11.449 17.2974 11.573 17.3451 11.6888C17.3928 11.8045 17.4628 11.9097 17.5509 11.9982C17.7288 12.1769 17.97 12.2773 18.2214 12.2773C18.4729 12.2773 18.7141 12.1769 18.8919 11.9982L22.5716 8.29998C23.1036 7.76242 23.4021 7.03494 23.4019 6.27667C23.4018 5.5184 23.1029 4.79106 22.5706 4.25376Z" fill="#453C3C" />
+                                  </svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -1400,9 +1470,223 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Modals -->
+
+        <!-- Выбор городов -->
+
+        <div class="city modal" id="cityModal">
+            <div class="modal__content">
+                <div class="close-btn">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.519531" y="0.777344" width="29" height="29" rx="14.5" fill="white" />
+                        <rect x="0.519531" y="0.777344" width="29" height="29" rx="14.5" stroke="#453C3C" />
+                        <path d="M10.4066 9.01532C10.0893 8.69802 9.57481 8.69802 9.25751 9.01532C8.94021 9.33262 8.94021 9.84707 9.25751 10.1644L14.3705 15.2774L9.25751 20.3904C8.94021 20.7077 8.94021 21.2222 9.25751 21.5395C9.57481 21.8568 10.0893 21.8568 10.4066 21.5395L15.5196 16.4265L20.6325 21.5394C20.9498 21.8567 21.4643 21.8567 21.7816 21.5394C22.0989 21.2221 22.0989 20.7076 21.7816 20.3903L16.6686 15.2774L21.7816 10.1645C22.0989 9.84719 22.0989 9.33274 21.7816 9.01544C21.4643 8.69814 20.9498 8.69814 20.6325 9.01544L15.5196 14.1284L10.4066 9.01532Z" fill="#453C3C" />
+                    </svg>
+                </div>
+                <div class="modal__thumbs">
+                    <button class="modal__thumb active">Доставка по России</button>
+                    <button class="modal__thumb">Международная доставка</button>
+                </div>
+                <div class="modal__title">Выбeрите город доставки</div>
+                <div class="modal__search">
+                    <input type="search" placeholder="Найти город">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3482 18.5203C14.6244 19.931 12.4208 20.7773 10.0195 20.7773C4.49668 20.7773 0.0195312 16.3002 0.0195312 10.7773C0.0195312 5.2545 4.49668 0.777344 10.0195 0.777344C15.5424 0.777344 20.0195 5.2545 20.0195 10.7773C20.0195 13.1786 19.1732 15.3822 17.7624 17.1061L20.7267 20.0703C21.1172 20.4608 21.1172 21.094 20.7267 21.4845C20.3361 21.875 19.703 21.875 19.3124 21.4845L16.3482 18.5203ZM18.0195 10.7773C18.0195 15.1956 14.4378 18.7773 10.0195 18.7773C5.60125 18.7773 2.01953 15.1956 2.01953 10.7773C2.01953 6.35907 5.60125 2.77734 10.0195 2.77734C14.4378 2.77734 18.0195 6.35907 18.0195 10.7773Z" fill="#453C3C" />
+                    </svg>
+                </div>
+                <div class="modal__inner">
+                    <div class="active">Москва</div>
+                        <div class="">Челябинск</div>
+                        <div class="">Адлер</div>
+                        <div class="">Белгород</div>
+                        <div class="">Владивосток</div>
+                        <div class="">Волгоград</div>
+                        <div class="">Воронеж</div>
+                        <div class="">Екатеринбург</div>
+                        <div class="">Москва</div>
+                        <div class="">Челябинск</div>
+                        <div class="">Адлер</div>
+                        <div class="">Белгород</div>
+                        <div class="">Владивосток</div>
+                        <div class="">Волгоград</div>
+                        <div class="">Воронеж</div>
+                        <div class="">Екатеринбург</div>
+                        <div class="">Иркутск</div>
+                        <div class="">Казань</div>
+                        <div class="">Копейск</div>
+                        <div class="">Красноярск</div>
+                        <div class="">Миасс</div>
+                        <div class="">Новосибирск</div>
+                        <div class="">Омск</div>
+                        <div class="">Пенза</div>
+                        <div class="">Иркутск</div>
+                        <div class="">Казань</div>
+                        <div class="">Копейск</div>
+                        <div class="">Красноярск</div>
+                        <div class="">Миасс</div>
+                        <div class="">Новосибирск</div>
+                        <div class="">Омск</div>
+                        <div class="">Пенза</div>
+                        <div class="">Пермь</div>
+                        <div class="">Самара</div>
+                        <div class="">Санкт-Петербург</div>
+                        <div class="">Сочи</div>
+                        <div class="">Сургут</div>
+                        <div class="">Троицк (Челяб. обл.)</div>
+                        <div class="">Тула</div>
+                        <div class="">Ульяновск</div>
+                        <div class="">Пермь</div>
+                        <div class="">Самара</div>
+                        <div class="">Санкт-Петербург</div>
+                        <div class="">Сочи</div>
+                        <div class="">Сургут</div>
+                        <div class="">Троицк (Челяб. обл.)</div>
+                        <div class="">Тула</div>
+                        <div class="">Ульяновск</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Уведоиление заказ -->
+        <div class="notify-block">
+            <div class="notify visible">
+                <div class="wrapper">
+                    <div class="close">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.40656 0.515319C1.08925 0.198018 0.574808 0.198018 0.257507 0.515319C-0.059794 0.83262 -0.059794 1.34707 0.257507 1.66437L5.37054 6.7774L0.257507 11.8904C-0.0597936 12.2077 -0.0597939 12.7222 0.257507 13.0395C0.574808 13.3568 1.08925 13.3568 1.40656 13.0395L6.51959 7.92645L11.6325 13.0394C11.9498 13.3567 12.4643 13.3567 12.7816 13.0394C13.0989 12.7221 13.0989 12.2076 12.7816 11.8903L7.66864 6.7774L12.7816 1.66449C13.0989 1.34719 13.0989 0.832743 12.7816 0.515442C12.4643 0.198141 11.9498 0.198141 11.6325 0.515442L6.51959 5.62836L1.40656 0.515319Z" fill="#453C3C" />
+                          </svg>
+                       </div>
+                       <img class="notify__img" src="./images/notify.png">
+                       <div class="notify__inner">
+                            <div class="notify__title">Букет из светло-персиковых кустовых роз Павлова</div>
+                            <a href="#" class="notify__link">
+                                Перейти к заказу
+                                <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1416 0.62671C10.8576 0.910727 10.8576 1.37121 11.1416 1.65523L13.5365 4.05006H0.746803C0.345142 4.05006 0.0195312 4.37567 0.0195312 4.77733C0.0195312 5.17899 0.345142 5.50461 0.746803 5.50461H13.5365L11.1416 7.89944C10.8576 8.18345 10.8576 8.64394 11.1416 8.92796C11.4257 9.21197 11.8861 9.21197 12.1702 8.92796L15.8065 5.29159C16.0905 5.00757 16.0905 4.54709 15.8065 4.26307L12.1702 0.62671C11.8861 0.342692 11.4257 0.342692 11.1416 0.62671Z" fill="#453C3C" />
+                                  </svg>
+                            </a>
+                       </div>
+                </div>
+            </div>
+    
+            <!-- Корзина -->
+    
+            <div class="cart-notify">
+                <div class="wrapper">
+                    <div class="close">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.40656 0.515319C1.08925 0.198018 0.574808 0.198018 0.257507 0.515319C-0.059794 0.83262 -0.059794 1.34707 0.257507 1.66437L5.37054 6.7774L0.257507 11.8904C-0.0597936 12.2077 -0.0597939 12.7222 0.257507 13.0395C0.574808 13.3568 1.08925 13.3568 1.40656 13.0395L6.51959 7.92645L11.6325 13.0394C11.9498 13.3567 12.4643 13.3567 12.7816 13.0394C13.0989 12.7221 13.0989 12.2076 12.7816 11.8903L7.66864 6.7774L12.7816 1.66449C13.0989 1.34719 13.0989 0.832743 12.7816 0.515442C12.4643 0.198141 11.9498 0.198141 11.6325 0.515442L6.51959 5.62836L1.40656 0.515319Z" fill="#453C3C" />
+                          </svg>
+                       </div>
+                       <img class="notify__img" src="./images/notify.png">
+                       <div class="notify__inner">
+                            <div class="notify__title">Букет из светло-персиковых кустовых роз Павлова</div>
+                            <div class="price">4290 ₽</div>
+                       </div>
+                </div>
+                <div class="wrapper">
+                    <div class="close">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.40656 0.515319C1.08925 0.198018 0.574808 0.198018 0.257507 0.515319C-0.059794 0.83262 -0.059794 1.34707 0.257507 1.66437L5.37054 6.7774L0.257507 11.8904C-0.0597936 12.2077 -0.0597939 12.7222 0.257507 13.0395C0.574808 13.3568 1.08925 13.3568 1.40656 13.0395L6.51959 7.92645L11.6325 13.0394C11.9498 13.3567 12.4643 13.3567 12.7816 13.0394C13.0989 12.7221 13.0989 12.2076 12.7816 11.8903L7.66864 6.7774L12.7816 1.66449C13.0989 1.34719 13.0989 0.832743 12.7816 0.515442C12.4643 0.198141 11.9498 0.198141 11.6325 0.515442L6.51959 5.62836L1.40656 0.515319Z" fill="#453C3C" />
+                          </svg>
+                       </div>
+                       <img class="notify__img" src="./images/notify.png">
+                       <div class="notify__inner">
+                            <div class="notify__title">Букет из светло-персиковых кустовых роз Павлова</div>
+                           <div class="price">4290 ₽</div>
+                       </div>
+                </div>
+                <button class="cart-notify__btn">Оформить заказ</button>
+            </div>
+        </div>
+
+        <!-- Авторизация -->
+
+        <div class="authorization modal">
+            <div class="modal-content">
+                <div class="close-btn authclose-btn">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.519531" y="0.777344" width="29" height="29" rx="14.5" fill="white" />
+                        <rect x="0.519531" y="0.777344" width="29" height="29" rx="14.5" stroke="#453C3C" />
+                        <path d="M10.4066 9.01532C10.0893 8.69802 9.57481 8.69802 9.25751 9.01532C8.94021 9.33262 8.94021 9.84707 9.25751 10.1644L14.3705 15.2774L9.25751 20.3904C8.94021 20.7077 8.94021 21.2222 9.25751 21.5395C9.57481 21.8568 10.0893 21.8568 10.4066 21.5395L15.5196 16.4265L20.6325 21.5394C20.9498 21.8567 21.4643 21.8567 21.7816 21.5394C22.0989 21.2221 22.0989 20.7076 21.7816 20.3903L16.6686 15.2774L21.7816 10.1645C22.0989 9.84719 22.0989 9.33274 21.7816 9.01544C21.4643 8.69814 20.9498 8.69814 20.6325 9.01544L15.5196 14.1284L10.4066 9.01532Z" fill="#453C3C" />
+                    </svg>
+                </div>
+                <div class="block-reg block">
+                    <div class="authorization__title">Регистрация</div>
+                    <div class="authorization__inner">
+                        <div class="authorization__input">
+                            <div class="lable">Логин <span>*</span></div>
+                            <input type="text" placeholder="Логин">
+                        </div>
+                        <div class="authorization__input">
+                            <div class="lable">ФИО <span>*</span></div>
+                            <input type="text" placeholder="ФИО">
+                        </div>
+                        <div class="authorization__input">
+                            <div class="lable">Ваш email <span>*</span></div>
+                            <input type="text" placeholder="Ваш Email">
+                        </div>
+                        <div class="authorization__input">
+                            <div class="lable">Телефон <span>*</span></div>
+                            <input type="text" placeholder="+7 (922) 999-99-99">
+                        </div>
+                        <div class="authorization__input">
+                            <div class="lable">Пароль <span>*</span></div>
+                            <input type="password" placeholder="Пароль">
+                        </div>
+                        <div class="authorization__input">
+                            <div class="lable">Повторить пароль  <span>*</span></div>
+                            <input type="password" placeholder="Пароль">
+                        </div>
+                        <button class="authorization__btn">Регистрация</button>
+                        <button class="authorization__btn-log open-log">
+                            Войти  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.8124 5.57024C16.2029 5.17971 16.8361 5.17971 17.2266 5.57024L22.2266 10.5702C22.6172 10.9608 22.6172 11.5939 22.2266 11.9845L17.2266 16.9844C16.8361 17.375 16.2029 17.375 15.8124 16.9844C15.4219 16.5939 15.4219 15.9608 15.8124 15.5702L19.1053 12.2773L7.51953 12.2773C6.96725 12.2773 6.51953 11.8296 6.51953 11.2773C6.51953 10.7251 6.96725 10.2773 7.51953 10.2773L19.1053 10.2773L15.8124 6.98445C15.4219 6.59393 15.4219 5.96076 15.8124 5.57024Z" fill="#453C3C" />
+                                <path d="M8.51953 1.27734C8.51953 1.82963 8.07182 2.27734 7.51953 2.27734L3.51953 2.27734C2.96725 2.27734 2.51953 2.72506 2.51953 3.27734L2.51953 19.2773C2.51953 19.8296 2.96725 20.2773 3.51953 20.2773L7.51953 20.2773C8.07182 20.2773 8.51953 20.7251 8.51953 21.2773C8.51953 21.8296 8.07182 22.2773 7.51953 22.2773L3.51953 22.2773C1.86268 22.2773 0.51953 20.9342 0.51953 19.2773L0.519531 3.27734C0.519531 1.62049 1.86268 0.277343 3.51953 0.277343L7.51953 0.277343C8.07182 0.277343 8.51953 0.725058 8.51953 1.27734Z" fill="#453C3C" />
+                              </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-log block active">
+                    <div class="authorization__title">Войти</div>
+                    <div class="modal__thumbs">
+                        <button class="modal__thumb active">Телефон</button>
+                        <button class="modal__thumb">Логин</button>
+                        <button class="modal__thumb">Email</button>
+                    </div>
+                    <div class="authorization__inner">
+                        <div class="authorization__input">
+                            <div class="lable">Телефон <span>*</span></div>
+                            <input type="text" placeholder="Логин">
+                        </div>
+                        <div class="authorization__input">
+                            <div class="lable">Пароль <span>*</span></div>
+                            <input type="password" placeholder="Логин">
+                        </div>
+                        <button class="authorization__btn">Войти</button>
+                        <div class="authorization__wrap">
+                            <button class="open-reg">Регистрация</button> |
+                            <button class="open-pass">Забыли пароль?</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="block-pass block">
+                    <div class="authorization__title">Восстановление пароля</div>
+                    <div class="authorization__inner">
+                        <div class="authorization__input">
+                            <div class="lable">Ваш Email <span>*</span></div>
+                            <input type="email" placeholder="Ваш Email">
+                        </div>
+                        <button class="authorization__btn">Восстановить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
 <script src="./js/swiper.js"></script>
+<script src="./js/modals.js"></script>
 <script src="./js/app.js"></script>
 </html>
