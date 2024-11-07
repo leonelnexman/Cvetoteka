@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "",
+  "homepage": "https://leonelnexman.github.io/Cvetoteka/",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },

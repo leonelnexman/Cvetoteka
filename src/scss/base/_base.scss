@@ -2,6 +2,7 @@
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+    overflow: hidden;
 }
 html{
     font-size: calc(100vw / 1920 * 10);
@@ -15,4 +16,88 @@ body{
     max-width: 136rem;
     margin: auto;
 }
+.main-container{
+    padding-top: 5rem;
+}
+.breadcrumbs{
+    margin-bottom: 4rem;
+    .container{
+        display: flex;
+        gap: 2rem;
+    }
+    a{
+        position: relative;
+        font: 500 1.6rem / 1 $font-family;
+        color: rgba(69, 60, 60, 0.5);
+        &:first-child{
+            &::before{
+                display: none;
+            }
+        }
+        &:last-child{
+            color:  #453c3c;
+            &::before{
+                background:  #453c3c;
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: -1rem;
+            height: 105%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.2rem;
+            background: rgba(69, 60, 60, 0.5);
+        }    
+    }
+}
+
+.styled-checkbox {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+  
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+  
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 1rem;
+      display: inline-block;
+      vertical-align: text-top;
+      border: 0.1px solid #000;
+      border-radius: 50%;
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+    
+    
+    // Disabled state label.
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+  
+    // Disabled box.
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+  
+    // Checkmark. Could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      width: 2.7rem;
+      height: 2.7rem;
+      background-size: cover !important;
+      background: url('../images/check.png');
+      background-repeat: no-repeat;
+      left: 2.1rem;
+    }
+  }
 
