@@ -25,6 +25,20 @@ const main = new Swiper('.main-section__slider', {
       nextEl: '.category-products__next',
       prevEl: '.category-products__prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      0: {
+        slidesPerView: 2,
+      },
+    },
   });
 
 
@@ -38,6 +52,17 @@ const main = new Swiper('.main-section__slider', {
     },
     pagination: {
       el: '.swiper-pagination',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 1,
+      },
     },
   });
 
