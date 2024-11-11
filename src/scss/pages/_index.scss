@@ -553,6 +553,8 @@
 			position: relative;
 			flex-direction: column;
 			height: 66rem;
+			padding: 6rem 1.5rem;
+			border-radius: 4rem;
 		}
 	}
 	&__info{
@@ -596,12 +598,20 @@
 			position: relative;
 			z-index: 7;
 		}
+		@media (max-width: 700px){
+			position: static;
+			margin-top: 1rem;
+		}	
 	}
 	&__price{
 		font: 600 2.8rem / 1 $font-family;
 		color: #453c3c;
 		display: flex;
 		gap: 1rem;
+		@media (max-width: 700px){
+			width: 100%;
+			justify-content: center;
+		}
 		svg{
 			width: 2.4rem;
 			height: 2.4rem;
@@ -617,6 +627,9 @@
 		@media (max-width: 700px){
 			position: absolute;
 			bottom: 5rem;
+			width: 29rem;
+			left: 2rem;
+			z-index: 777;
 		}	
 	}
 	&__img img{
@@ -628,6 +641,10 @@
 			height: 30rem;
 			position: absolute;
 			right: 0rem;
+		}
+		@media (max-width: 700px){
+			width: 100%;
+			height: auto;
 		}
 	}
 }
@@ -678,6 +695,9 @@
 		color: #453c3c;
 		@media (max-width: 952px) {
 			font: 600 3.8rem / 1 $font-family;
+		}
+		@media (max-width: 700px) {
+			font: 600 2.8rem / 1 $font-family;
 		}
 	}
 	.category-products__prev{
@@ -834,6 +854,9 @@
 
 .instagram{
 	margin-bottom: 10rem;
+	@media (max-width: 700px){
+		margin-bottom: 7rem;
+	}
 	&__top{
 		display: flex;
 		justify-content: space-between;
@@ -858,6 +881,9 @@
 		color: #453c3c;
 		@media (max-width: 962px){
 			font: 600 3.8rem / 1 $font-family;
+		}
+		@media (max-width: 962px){
+			font: 600 2.8rem / 1 $font-family;
 		}	
 	}
 	&__inner{
@@ -869,6 +895,11 @@
 			gap: 1.9rem 0;
 		}
 	}
+	&__link{
+		span{
+			display: none;
+		}
+	}
 	&__item{
 		position: relative;
 		width: 32rem;
@@ -878,6 +909,10 @@
 		@media (max-width: 962px){
 			width: 17.3rem;
 			height: 17.3rem;
+		}
+		@media (max-width: 962px){
+			width: 16rem;
+            height: 16rem;
 		}
 		&:hover{
 			.overlay{
@@ -1176,6 +1211,12 @@
 			color: rgba(69, 60, 65, 0.5);
 			margin-right: 2rem;	
 			margin-left: 0.5rem;
+			@media (max-width: 962px) {
+				font: 500 1.4rem / 1 $font-family;
+			}
+			@media (max-width: 700px) {
+				margin: 0 0.5rem;
+			}
 		}
 		&:hover{
 			.svg path{
@@ -1202,6 +1243,9 @@
 	background: #f0f0f1;	
 	padding: 3rem;
 	position: relative;
+	@media (max-width: 962px) {
+		height: auto;
+	}
 	img{
 		width: 16rem;
 		height: 16rem;	
@@ -1293,11 +1337,20 @@
 .balloons{
 	position: relative;
 	margin-bottom: 10rem;
+	@media (max-width: 700px){
+		padding-bottom: 3rem;
+	}
+	@media (max-width: 700px){
+		margin-bottom: 5rem;
+	}
 	.container{
 		display: flex;
 		justify-content: space-between;
 		@media (max-width: 962px){
 			gap: 2rem;
+		}
+		@media (max-width: 700px){
+			flex-direction: column;
 		}
 	}
 	.line{
@@ -1306,10 +1359,17 @@
 		left: 4rem;
 		width: 25.3rem;
 		height: 11rem;
+		@media (max-width: 700px){
+			top: 15rem;
+		}
 	}
 	&__slider{
 		width: 67rem;
 		overflow: hidden;
+		@media (max-width: 700px){
+			width: 100%;
+			padding-bottom: 1rem;
+		}
 	}
 	&__big{
 		position: relative;
@@ -1325,6 +1385,12 @@
 			padding: 2rem;
 			height: 42rem;
 		}
+		@media (max-width: 700px){
+			padding: 6rem 2rem;
+			width: 100%;
+			height: 56rem;
+		}
+
 		img{
 			position: absolute;
 			right: 0;
@@ -1334,6 +1400,10 @@
 			@media (max-width: 962px){
 				left: 50%;
 				transform: translate(-50%);
+			}
+			@media (max-width: 700px){
+				width: 27.2rem;
+				height: 46.5rem;
 			}
 		}
 		a{
@@ -1352,6 +1422,11 @@
 				bottom: -1rem;
 				left: 0rem;
 			}
+			@media (max-width: 700px){
+				position: absolute;
+				bottom: 3rem;
+				left: 1.5rem;
+			}
 			svg{
 				width: 2.3rem !important;
 				height: 2.3rem;
@@ -1368,6 +1443,9 @@
 			z-index: 777;
 			font: 600 2.8rem / 1 $font-family;
 			margin-top: 27rem;
+		}
+		@media (max-width: 700px){
+			margin-top: 0;
 		}
 	}
 	&__nav{
@@ -1391,6 +1469,9 @@
 	position: relative;
 	margin-bottom: 10rem;
 	border-radius: 2.4rem;
+	@media (max-width: 700px){
+		margin-bottom: 5rem;
+	}
 	.swiper-pagination{
 		position: absolute;
 		z-index: 7777;
@@ -1427,6 +1508,10 @@
 		@media (max-width: 962px){
 			padding: 4rem 3rem;
 		}
+		@media (max-width: 700px){
+			padding: 6rem 2rem;
+			height: 56rem;
+		}
 		&__img2{
 			@media (max-width: 962px){
 				width: 25.7rem;
@@ -1444,6 +1529,10 @@
 			position: absolute;
 			right: 0;
 			max-height: 44.1rem;
+			@media (max-width: 700px){
+				width: 31.3rem;
+				height: 31rem;
+			}
 		}
 		&__img2{
 			@media (max-width: 962px){
@@ -1465,7 +1554,10 @@
 			color: #453c3c;
 			@media (max-width: 962px){
 				font: 600 3.8rem / 1 $font-family;
-			}	
+			}
+			@media (max-width: 700px){
+				font: 600 3.2rem / 1 $font-family;
+			}
 		}
 		&__link{
 			position: absolute;
@@ -2228,6 +2320,12 @@ color: #453c3c;
 			width: 100%;
 			font: 500 2rem / 1 $font-family;
 			color: #453c3c;
+			appearance: none;
+		}
+		svg{
+			width: 2.9rem;
+			height: 2.9rem;
+			cursor: pointer;
 		}
 	}
 }

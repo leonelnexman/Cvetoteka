@@ -90,7 +90,16 @@ const main = new Swiper('.main-section__slider', {
     pagination: {
       el: '.swiper-pagination',
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      700: {
+        slidesPerView: 2,
+      },
+    },
   });
+  
 
   const citySwitchers = document.querySelectorAll('.city-swither');
 
@@ -183,6 +192,33 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
+
+const searchField = document.querySelector('.catalog-filter__search input');
+const searchIcon = document.querySelector('.catalog-filter__search .icon-search');
+const closeIcon = document.querySelector('.catalog-filter__search .search-close');
+
+// Функция для показа/скрытия иконок в зависимости от состояния поля ввода
+function toggleSearchIcons() {
+  if (searchField.value.length > 0) {
+    searchIcon.style.display = 'none';   // Скрываем иконку поиска
+    closeIcon.style.display = 'block';   // Показываем иконку закрытия
+  } else {
+    searchIcon.style.display = 'block';  // Показываем иконку поиска
+    closeIcon.style.display = 'none';    // Скрываем иконку закрытия
+  }
+}
+
+// Добавляем обработчик события на изменение поля ввода
+searchField.addEventListener('input', toggleSearchIcons);
+
+// Обработчик клика по иконке закрытия, который очищает поле ввода
+closeIcon.addEventListener('click', () => {
+  searchField.value = '';       // Очищаем поле ввода
+  toggleSearchIcons();          // Обновляем иконки
+});
+
+// Устанавливаем начальное состояние иконок
+toggleSearchIcons();
 
 const rangevalue = 
     document.querySelector(".slider-container .price-slider");
