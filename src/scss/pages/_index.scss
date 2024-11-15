@@ -330,6 +330,7 @@
 		overflow: hidden;
 		border-radius: 6rem;
 		@media (max-width: 700px){
+			isolation: isolate;
 			border-radius: 4rem;
 		}
 		.swiper-slide{
