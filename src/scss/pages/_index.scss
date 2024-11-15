@@ -517,9 +517,12 @@
 		&:hover{
 			svg circle{
 				stroke: #453c3c;
+				@media (max-width: 700px){
+					stroke: none;
+				}
 			}
 			svg path{
-				transform: translate(2.1rem, -0.7rem) rotate(45deg);
+				transform: translate(1.9rem, -0.8rem) rotate(45deg);
 			}
 		}
 		svg{
@@ -1525,6 +1528,7 @@
 		padding: 4rem;
 		padding-top: 15.9rem;
 		position: relative;
+		background-size: cover !important;
 		&.banner-second img{
 			@media (max-width: 962px){
 				top: 0;
@@ -1556,12 +1560,14 @@
 			position: absolute;
 			right: 0;
 			max-height: 44.1rem;
+			top: 6rem;
 			@media (max-width: 962px){
 				top: 12rem;
 				width: 35.3rem;
 				height: 36rem;
 			}
 			@media (max-width: 700px){
+				top: 15rem;
 				width: 31.3rem;
 				height: 31rem;
 			}
@@ -1690,6 +1696,10 @@
 		padding: 4.5rem 4rem;
 		background: #fff;
 		position: relative;
+		@media (max-width: 962px){
+			width: 34rem !important;
+			padding: 5rem 2rem;
+		}
 	}
 	&__inner{
 		display: flex;
@@ -1698,6 +1708,10 @@
 		gap: 2rem 3rem;
 		max-height: 26.8rem;
 		overflow: auto;
+		@media (max-width: 962px){
+			width: 100%;
+			gap: 2rem 0;
+		}
 		&::-webkit-scrollbar {
 			width: 12px; /* Ширина скроллбара */
 			border-radius: 0.5rem;
@@ -1717,6 +1731,9 @@
 			font: 500 1.6rem / 1 $font-family;
 			color: #453c3c;
 			cursor: pointer;
+			@media (max-width: 962px){
+				width: 50%;
+			}
 			&.active{
 				color: rgba(69, 60, 60, 0.5);
 			}
@@ -1737,6 +1754,9 @@
 		align-items: center;
 		justify-content: space-between;
 		padding-right: 2rem;
+		@media (max-width: 962px){
+			width: 100%;
+		}
 		input{
 			width: 100%;
 			padding: 1.9rem;
@@ -1754,6 +1774,10 @@
 		border-radius: 1.2rem;
 		margin: auto;
 		margin-bottom: 2rem;
+		@media (max-width: 962px){
+			width: 100%;
+			flex-direction: column;
+		}
 		button{
 			font: 600 1.4rem / 1 $font-family;
 			padding: 1.2rem 2.5rem;
@@ -2399,6 +2423,11 @@ color: #453c3c;
 		position: relative;
 		margin: auto;
 		margin-bottom: 4rem;
+		@media (max-width: 700px){
+			width: 33rem;
+			margin: auto;
+			margin-bottom: 3rem;
+		}
 		img{
 			width: 27.5rem;
 			height: 38rem;
@@ -2406,10 +2435,18 @@ color: #453c3c;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -67%);
+			@media (max-width: 700px){
+				width: 12.8rem;
+				height: 17.6rem;
+			}
 		}
 		svg{
 			width: 71.1rem;
 			height: 25.6rem;
+			@media (max-width: 700px){
+				width: 33rem;
+				height: 11.8rem;
+			}
 		}
 	}
 	&__title{
@@ -2418,6 +2455,10 @@ color: #453c3c;
 		text-align: center;
 		color: #453c3c;
 		margin-bottom: 2rem;
+		@media (max-width: 700px){
+			width: 100%;
+			font: 600 2.8rem / 1 $font-family;
+		}
 	}
 	&__descr{
 		font: 500 1.8rem / 1.5 $font-family;
@@ -2428,6 +2469,9 @@ color: #453c3c;
 		margin-bottom: 4rem;
 		@media (max-width: 962px){
 			width: 100%;
+		}
+		@media (max-width: 700px){
+			font: 500 1.6rem / 1.5 $font-family;
 		}
 	}
 	&__actions{
