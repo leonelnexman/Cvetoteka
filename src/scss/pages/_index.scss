@@ -212,6 +212,9 @@
 				height: 2.4rem;
 			}
 		}
+		.lang-swither{
+			display: none;
+		}
 	}
 	&__action{
 		position: relative;
@@ -337,6 +340,7 @@
 			}
 		}
 	}
+
 }
 
 .main-section{
