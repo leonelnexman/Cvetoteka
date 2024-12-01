@@ -367,8 +367,8 @@
 			height: 62.5rem;
 			position: relative;
 			@media (max-width: 700px){
-				padding: 6rem 2rem;
-				height: 65rem;
+				padding: 3rem 2rem;
+				height: 53.6rem;
 			}
 		}
 	}
@@ -392,13 +392,18 @@
 		}
 		@media (max-width: 700px){
 			width: 100%;
-			font: 600 3.2rem / 1 $font-family;
+			font: 600 2.4rem / 1 $font-family;
+			margin-bottom: 1rem;
 		}
 	}
 	&__descr{
 		font: 500 1.8rem / 1 $font-family;
 		color: #453c3c;
-		margin-bottom: 5rem;	
+		margin-bottom: 5rem;
+		@media (max-width: 700px){
+			font: 500 1.6rem / 1 $font-family;
+			color: #453c3c;	
+		}
 	}
 	&__btn{
 		width: 18.4rem;
@@ -445,9 +450,9 @@
 			right: 1rem;
 		}
 		@media (max-width: 700px){
-			top: 17.5rem;
+			top: 11rem;
 			right: auto;
-			left: 0;
+			left: 2rem;
 		}
 		img{
 			position: relative;
@@ -458,9 +463,8 @@
 				max-height: 50.6rem;
 			}
 			@media (max-width: 700px){
-				width: 32.9rem;
-				height: auto;
-				max-height: 100%;
+				width: 29rem;
+				height: 30rem;
 			}
 		}
 	}
@@ -523,7 +527,7 @@
 			font: 600 2rem / 1.1 $font-family;
 		}
 		@media (max-width: 700px){
-			font: 600 2.4rem / 1.1 $font-family;
+			font: 600 1.5rem / 1.1 $font-family;
 		}
 	}
 	&__item{
@@ -539,8 +543,9 @@
 			height: 38rem;
 		}
 		@media (max-width: 700px){
-			width: 100%;
-			height: 20rem;
+			padding: 3rem 1rem 2rem;
+			width: 15.5rem;
+			height: 30rem;
 			overflow: hidden;
 		}
 		&:hover{
@@ -563,6 +568,11 @@
 			height: 4.3rem;
 			transition: all 0.3s;
 			stroke: transparent;
+			@media (max-width: 700px){
+				path{
+					stroke: #453C3C;
+				}
+			}
 		}
 		img{
 			position: absolute;
@@ -574,9 +584,9 @@
 				height: auto;
 			}
 			@media (max-width: 700px){
-				max-width: 100%;
+				max-width: auto;
 				height: 100%;
-				max-height: 16rem;
+				max-height: 19rem;
 			}
 		}
 	}
@@ -2912,8 +2922,8 @@ color: #453c3c;
 			}
 		}
 		svg{
-			width: 5.4rem;
-			height: 5.4rem;
+			min-width: 5.4rem;
+			min-height: 5.4rem;
 			@media (max-width: 600px){
 				min-width: 5.4rem;
 				min-height: 5.4rem;
