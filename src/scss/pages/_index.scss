@@ -368,7 +368,7 @@
 			position: relative;
 			@media (max-width: 700px){
 				padding: 3rem 2rem;
-				height: 53.6rem;
+				height: 50.6rem;
 			}
 		}
 	}
@@ -376,7 +376,10 @@
 		padding-top: 12rem;
 		width: 67rem;
 		@media (max-width: 700px){
-			padding-top: 0;
+			padding-top: 29rem;
+			width: 100%;
+			position: relative;
+			z-index: 77777777777;
 		}
 	}
 	&__title{
@@ -394,6 +397,8 @@
 			width: 100%;
 			font: 600 2.4rem / 1 $font-family;
 			margin-bottom: 1rem;
+			color: #fff;
+			text-align: center;
 		}
 	}
 	&__descr{
@@ -402,7 +407,9 @@
 		margin-bottom: 5rem;
 		@media (max-width: 700px){
 			font: 500 1.6rem / 1 $font-family;
-			color: #453c3c;	
+			color: #fff;	
+			text-align: center;
+			margin-bottom: 2rem;
 		}
 	}
 	&__btn{
@@ -414,7 +421,7 @@
 			width: 29rem;
 			position: absolute;
 			z-index: 777;
-			bottom: 7rem;
+			bottom: 1rem;
 		}
 	}
 	.decor1{
@@ -450,9 +457,9 @@
 			right: 1rem;
 		}
 		@media (max-width: 700px){
-			top: 11rem;
+			top: 0rem;
 			right: auto;
-			left: 2rem;
+			left: 0rem;
 		}
 		img{
 			position: relative;
@@ -463,8 +470,8 @@
 				max-height: 50.6rem;
 			}
 			@media (max-width: 700px){
-				width: 29rem;
-				height: 30rem;
+				width: 110%;
+				height: 100%;
 			}
 		}
 	}
@@ -491,6 +498,7 @@
 		bottom: 5.3rem;
 		@media (max-width: 700px){
 			bottom: 2rem;
+			gap: 1rem;
 		}
 		.swiper-pagination-bullet{
 			width: 2rem;
@@ -499,11 +507,18 @@
 			background: #fff;
 			opacity: 1;
 			transition: all 0.3s;
+			@media (max-width: 700px){
+				width: 1rem;
+				height: 1rem;
+			}
 		}
 		.swiper-pagination-bullet-active{
 			border: 1px solid #453c3c;
 			border-radius: 1rem;	
 			width: 4rem;
+			@media (max-width: 700px){
+				width: 2rem;
+			}
 		}
 	}
 }
