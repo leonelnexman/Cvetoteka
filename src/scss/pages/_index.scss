@@ -630,8 +630,8 @@
 		@media (max-width: 700px){
 			position: relative;
 			flex-direction: column;
-			height: 66rem;
-			padding: 6rem 1.5rem;
+			height: 50.6rem;
+			padding: 3rem 2rem !important;
 			border-radius: 4rem;
 			
 		}
@@ -650,7 +650,8 @@
 			font: 600 1.8rem / 1.5 $font-family;
 			color: #453c3c;
 			@media (max-width: 700px){
-				font: 600 1.6rem / 1.5 $font-family;
+				font: 600 1.4rem / 1.5 $font-family;
+				text-align: center;
 			}	
 		}
 	}
@@ -665,7 +666,10 @@
 		}
 		@media (max-width: 700px){
 			font: 600 2.8rem / 1 $font-family;
-			width: 23rem;
+			width: 80%;
+			text-align: center;
+			margin: auto;
+			margin-bottom: 1.2rem;
 		}
 	}
 	&__flex{
@@ -690,6 +694,8 @@
 		@media (max-width: 700px){
 			width: 100%;
 			justify-content: center;
+			align-items: center;
+			font: 600 2rem / 1 $font-family;
 		}
 		svg{
 			width: 2.4rem;
@@ -705,7 +711,7 @@
 		color: #fff;
 		@media (max-width: 700px){
 			position: absolute;
-			bottom: 5rem;
+			bottom: 3rem;
 			width: 29rem;
 			left: 2rem;
 			z-index: 777;
@@ -722,8 +728,11 @@
 			right: 0rem;
 		}
 		@media (max-width: 700px){
-			width: 100%;
-			height: auto;
+			width: 27.8rem;;
+			height: 21.9rem;
+			right: auto;
+			left: 0;
+			bottom: 6rem;
 		}
 	}
 }
@@ -1465,9 +1474,9 @@
 			height: 42rem;
 		}
 		@media (max-width: 700px){
-			padding: 6rem 2rem;
+			padding: 3rem 2rem 4rem;
 			width: 100%;
-			height: 40rem;
+			height: 50.6rem;
 		}
 
 		img{
@@ -1484,8 +1493,10 @@
 				width: 27.2rem;
 				height: 46.5rem;
 				@media (max-width: 700px){
-					bottom: -10rem;
+					bottom: 0rem;
 					left: 55%;
+					width: 25.8rem;
+					height: 42rem;
 				}
 			}
 		}
@@ -1529,6 +1540,8 @@
 		}
 		@media (max-width: 700px){
 			margin-top: 0;
+			font: 600 2.4rem / 1 $font-family;
+			text-align: center;
 		}
 	}
 	&__nav{
@@ -1598,13 +1611,11 @@
 		}
 		@media (max-width: 962px){
 			padding: 4rem 3rem;
+			
 		}
 		@media (max-width: 700px){
-			padding: 6rem 2rem;
-			height: 56rem;
-			@media (max-width: 962px){
-				height: 40rem;
-			}
+			padding: 3rem 2rem;
+			height: 50.6rem;
 		}
 		&__img2{
 			@media (max-width: 962px){
