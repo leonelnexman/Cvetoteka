@@ -42,11 +42,13 @@ body{
     .container{
         display: flex;
         gap: 2rem;
+        overflow: hidden;
     }
     a{
         position: relative;
         font: 500 1.6rem / 1 $font-family;
         color: rgba(69, 60, 60, 0.5);
+        white-space: nowrap;
         &:first-child{
             &::before{
                 display: none;
@@ -119,3 +121,12 @@ body{
     }
   }
 
+
+  .account{
+    .header{
+        display: none;
+        @media (max-width: 700px){
+            display: flex;
+        }
+    }
+  }

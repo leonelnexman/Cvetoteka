@@ -1,23 +1,25 @@
-const main = new Swiper('.main-section__slider', {
-  slidesPerView: 1,
+const mainElement = document.querySelector('.main-section__slider');
+if (mainElement) {
+  const main = new Swiper(mainElement, {
+    slidesPerView: 1,
     loop: true,
     speed: 1000,
     autoplay: {
-        delay: 5000,
-      },
+      delay: 5000,
+    },
     pagination: {
       el: '.swiper-pagination',
     },
-  
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
     },
   });
+}
 
-
-  const products = new Swiper('.category-products', {
+const categoryProductsElement = document.querySelector('.category-products');
+if (categoryProductsElement) {
+  const products = new Swiper(categoryProductsElement, {
     slidesPerView: 4,
     speed: 1000,
     spaceBetween: 20,
@@ -40,9 +42,11 @@ const main = new Swiper('.main-section__slider', {
       },
     },
   });
+}
 
-
-  const reviews = new Swiper('.reviews-slider', {
+const reviewsElement = document.querySelector('.reviews-slider');
+if (reviewsElement) {
+  const reviews = new Swiper(reviewsElement, {
     slidesPerView: 3,
     speed: 1000,
     spaceBetween: 20,
@@ -65,8 +69,11 @@ const main = new Swiper('.main-section__slider', {
       },
     },
   });
+}
 
-  const balloons = new Swiper('.balloons__slider', {
+const balloonsElement = document.querySelector('.balloons__slider');
+if (balloonsElement) {
+  const balloons = new Swiper(balloonsElement, {
     slidesPerView: 2,
     speed: 1000,
     spaceBetween: 20,
@@ -78,8 +85,11 @@ const main = new Swiper('.main-section__slider', {
       el: '.swiper-pagination',
     },
   });
+}
 
-  const banners = new Swiper('.banners__slider', {
+const bannersElement = document.querySelector('.banners__slider');
+if (bannersElement) {
+  const banners = new Swiper(bannersElement, {
     slidesPerView: 2,
     speed: 1000,
     spaceBetween: 20,
@@ -99,77 +109,119 @@ const main = new Swiper('.main-section__slider', {
       },
     },
   });
-  
+}
 
-  const citySwitchers = document.querySelectorAll('.city-swither');
+const productsAdd = document.querySelector('.add__wrapper');
+if (productsAdd) {
+  const productsAd = new Swiper(productsAdd, {
+    slidesPerView: 4,
+    speed: 1000,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      },
+      700: {
+        slidesPerView: 3,
+      },
+      962: {
+        slidesPerView: 4,
+      },
+    },
+  });
+}
 
+const View = document.querySelector('.watched__wrapper');
+if (View) {
+  const Vieww = new Swiper(View, {
+    slidesPerView: 6,
+    speed: 1000,
+    spaceBetween: 20,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      },
+      700: {
+        slidesPerView: 4,
+      },
+      1000: {
+        slidesPerView: 6,
+      },
+    },
+  });
+}
+
+const citySwitchers = document.querySelectorAll('.city-swither');
+if (citySwitchers.length) {
   citySwitchers.forEach(citySwitcher => {
     const select = citySwitcher.querySelector('select');
-    
-    select.addEventListener('focus', () => {
-      citySwitcher.classList.add('open');
-    });
-  
-    select.addEventListener('blur', () => {
-      citySwitcher.classList.remove('open');
-    });
-  
-    select.addEventListener('change', () => {
-      citySwitcher.classList.remove('open');
-    });
+    if (select) {
+      select.addEventListener('focus', () => {
+        citySwitcher.classList.add('open');
+      });
+
+      select.addEventListener('blur', () => {
+        citySwitcher.classList.remove('open');
+      });
+
+      select.addEventListener('change', () => {
+        citySwitcher.classList.remove('open');
+      });
+    }
   });
+}
 
-  const cartBtn = document.querySelector('.cart-btn');
+const cartBtn = document.querySelector('.cart-btn');
 const cartNotify = document.querySelector('.notify-block');
-
-// Добавляем обработчик события на кнопку
-cartBtn.addEventListener('click', () => {
-  // Переключаем класс 'visible'
-  cartNotify.classList.toggle('visible');
-});
+if (cartBtn && cartNotify) {
+  cartBtn.addEventListener('click', () => {
+    cartNotify.classList.toggle('visible');
+  });
+}
 
 const openReg = document.querySelector('.open-reg');
 const openPass = document.querySelector('.open-pass');
 const openLog = document.querySelector('.open-log');
-const blocks = document.querySelectorAll('.block'); // Находим все элементы с классом 'block'
+const blocks = document.querySelectorAll('.block');
 const blockReg = document.querySelector('.block-reg');
 const blockPass = document.querySelector('.block-pass');
 const blockLog = document.querySelector('.block-log');
 
-// Функция для удаления класса 'active' со всех блоков и добавления к новому
-function switchActiveClass(newActiveBlock) {
-  // Удаляем класс 'active' у всех блоков
-  blocks.forEach(block => block.classList.remove('active'));
-  
-  // Добавляем класс 'active' к новому блоку
-  newActiveBlock.classList.add('active');
-}
+if (openReg && openPass && openLog && blocks.length && blockReg && blockPass && blockLog) {
+  function switchActiveClass(newActiveBlock) {
+    blocks.forEach(block => block.classList.remove('active'));
+    newActiveBlock.classList.add('active');
+  }
 
-// Обработчики событий для кнопок
-openReg.addEventListener('click', () => switchActiveClass(blockReg));
-openPass.addEventListener('click', () => switchActiveClass(blockPass));
-openLog.addEventListener('click', () => switchActiveClass(blockLog));
+  openReg.addEventListener('click', () => switchActiveClass(blockReg));
+  openPass.addEventListener('click', () => switchActiveClass(blockPass));
+  openLog.addEventListener('click', () => switchActiveClass(blockLog));
+}
 
 const searchBtn = document.querySelector('.search-btn');
 const searchClose = document.querySelector('.search-close');
 const search = document.querySelector('.search');
+if (searchBtn && searchClose && search) {
+  function setSearchMaxHeight() {
+    search.style.maxHeight = `${search.scrollHeight}px`;
+  }
 
-// Функция для установки max-height элемента search
-function setSearchMaxHeight() {
-  search.style.maxHeight = `${search.scrollHeight}px`;
+  searchBtn.addEventListener('click', () => {
+    search.classList.add('visible');
+    setSearchMaxHeight();
+  });
+
+  searchClose.addEventListener('click', () => {
+    search.classList.remove('visible');
+    search.style.maxHeight = null;
+  });
 }
-
-// Добавляем класс 'visible' и вычисляем max-height при нажатии на search-btn
-searchBtn.addEventListener('click', () => {
-  search.classList.add('visible');
-  setSearchMaxHeight();
-});
-
-// Удаляем класс 'visible' и сбрасываем max-height при нажатии на search-close
-searchClose.addEventListener('click', () => {
-  search.classList.remove('visible');
-  search.style.maxHeight = null; // Сброс max-height
-});
 
 document.addEventListener('DOMContentLoaded', () => {
   const catalogSort = document.querySelector('.catalog__sort');
@@ -177,144 +229,173 @@ document.addEventListener('DOMContentLoaded', () => {
   const svgIcon = catalogSort?.querySelector('.catalog__sort-icon');
 
   if (catalogSort && selectElement && svgIcon) {
-      // Добавляем/удаляем класс open при фокусе и потере фокуса на select
-      selectElement.addEventListener('focus', () => {
-          svgIcon.classList.add('open');
-      });
+    selectElement.addEventListener('focus', () => {
+      svgIcon.classList.add('open');
+    });
 
-      selectElement.addEventListener('blur', () => {
-          svgIcon.classList.remove('open');
-      });
+    selectElement.addEventListener('blur', () => {
+      svgIcon.classList.remove('open');
+    });
 
-      // Клик по контейнеру для фокуса на select
-      catalogSort.addEventListener('click', () => {
-          selectElement.focus();
-      });
+    catalogSort.addEventListener('click', () => {
+      selectElement.focus();
+    });
   }
 });
 
 const searchField = document.querySelector('.catalog-filter__search input');
 const searchIcon = document.querySelector('.catalog-filter__search .icon-search');
 const closeIcon = document.querySelector('.catalog-filter__search .search-close');
-
-// Функция для показа/скрытия иконок в зависимости от состояния поля ввода
-function toggleSearchIcons() {
-  if (searchField.value.length > 0) {
-    searchIcon.style.display = 'none';   // Скрываем иконку поиска
-    closeIcon.style.display = 'block';   // Показываем иконку закрытия
-  } else {
-    searchIcon.style.display = 'block';  // Показываем иконку поиска
-    closeIcon.style.display = 'none';    // Скрываем иконку закрытия
+if (searchField && searchIcon && closeIcon) {
+  function toggleSearchIcons() {
+    if (searchField.value.length > 0) {
+      searchIcon.style.display = 'none';
+      closeIcon.style.display = 'block';
+    } else {
+      searchIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
   }
+
+  searchField.addEventListener('input', toggleSearchIcons);
+
+  closeIcon.addEventListener('click', () => {
+    searchField.value = '';
+    toggleSearchIcons();
+  });
+
+  toggleSearchIcons();
 }
 
-// Добавляем обработчик события на изменение поля ввода
-searchField.addEventListener('input', toggleSearchIcons);
+const rangeValue = document.querySelector(".slider-container .price-slider");
+const rangeInputValues = document.querySelectorAll(".range-input input");
+if (rangeValue && rangeInputValues.length) {
+  const priceInputValues = document.querySelectorAll(".price-input input");
+  if (priceInputValues.length) {
+    let priceGap = 500;
 
-// Обработчик клика по иконке закрытия, который очищает поле ввода
-closeIcon.addEventListener('click', () => {
-  searchField.value = '';       // Очищаем поле ввода
-  toggleSearchIcons();          // Обновляем иконки
-});
-
-// Устанавливаем начальное состояние иконок
-toggleSearchIcons();
-
-const rangevalue = 
-    document.querySelector(".slider-container .price-slider");
-const rangeInputvalue = 
-    document.querySelectorAll(".range-input input");
-
-// Set the price gap
-let priceGap = 500;
-
-// Adding event listners to price input elements
-const priceInputvalue = 
-    document.querySelectorAll(".price-input input");
-for (let i = 0; i < priceInputvalue.length; i++) {
-    priceInputvalue[i].addEventListener("input", e => {
-
-        // Parse min and max values of the range input
-        let minp = parseInt(priceInputvalue[0].value);
-        let maxp = parseInt(priceInputvalue[1].value);
-        let diff = maxp - minp
+    priceInputValues.forEach((input, i) => {
+      input.addEventListener("input", e => {
+        let minp = parseInt(priceInputValues[0].value);
+        let maxp = parseInt(priceInputValues[1].value);
 
         if (minp < 0) {
-            alert("minimum price cannot be less than 0");
-            priceInputvalue[0].value = 0;
-            minp = 0;
+          alert("minimum price cannot be less than 0");
+          priceInputValues[0].value = 0;
+          minp = 0;
         }
 
-        // Validate the input values
         if (maxp > 10000) {
-            alert("maximum price cannot be greater than 10000");
-            priceInputvalue[1].value = 10000;
-            maxp = 10000;
+          alert("maximum price cannot be greater than 10000");
+          priceInputValues[1].value = 10000;
+          maxp = 10000;
         }
 
         if (minp > maxp - priceGap) {
-            priceInputvalue[0].value = maxp - priceGap;
-            minp = maxp - priceGap;
+          priceInputValues[0].value = maxp - priceGap;
+          minp = maxp - priceGap;
 
-            if (minp < 0) {
-                priceInputvalue[0].value = 0;
-                minp = 0;
-            }
+          if (minp < 0) {
+            priceInputValues[0].value = 0;
+            minp = 0;
+          }
         }
 
-        // Check if the price gap is met 
-        // and max price is within the range
-        if (diff >= priceGap && maxp <= rangeInputvalue[1].max) {
-            if (e.target.className === "min-input") {
-                rangeInputvalue[0].value = minp;
-                let value1 = rangeInputvalue[0].max;
-                rangevalue.style.left = `${(minp / value1) * 100}%`;
-            }
-            else {
-                rangeInputvalue[1].value = maxp;
-                let value2 = rangeInputvalue[1].max;
-                rangevalue.style.right = 
-                    `${100 - (maxp / value2) * 100}%`;
-            }
+        if (e.target.className === "min-input") {
+          rangeInputValues[0].value = minp;
+          rangeValue.style.left = `${(minp / rangeInputValues[0].max) * 100}%`;
+        } else {
+          rangeInputValues[1].value = maxp;
+          rangeValue.style.right = `${100 - (maxp / rangeInputValues[1].max) * 100}%`;
         }
+      });
     });
 
-    // Add event listeners to range input elements
-    for (let i = 0; i < rangeInputvalue.length; i++) {
-        rangeInputvalue[i].addEventListener("input", e => {
-            let minVal = 
-                parseInt(rangeInputvalue[0].value);
-            let maxVal = 
-                parseInt(rangeInputvalue[1].value);
+    rangeInputValues.forEach((input, i) => {
+      input.addEventListener("input", e => {
+        let minVal = parseInt(rangeInputValues[0].value);
+        let maxVal = parseInt(rangeInputValues[1].value);
 
-            let diff = maxVal - minVal
-            
-            // Check if the price gap is exceeded
-            if (diff < priceGap) {
-            
-                // Check if the input is the min range input
-                if (e.target.className === "min-range") {
-                    rangeInputvalue[0].value = maxVal - priceGap;
-                }
-                else {
-                    rangeInputvalue[1].value = minVal + priceGap;
-                }
-            }
-            else {
-            
-                // Update price inputs and range progress
-                priceInputvalue[0].value = minVal;
-                priceInputvalue[1].value = maxVal;
-                rangevalue.style.left =
-                    `${(minVal / rangeInputvalue[0].max) * 100}%`;
-                rangevalue.style.right =
-                    `${100 - (maxVal / rangeInputvalue[1].max) * 100}%`;
-            }
-        });
-    }
+        if (maxVal - minVal < priceGap) {
+          if (e.target.className === "min-range") {
+            rangeInputValues[0].value = maxVal - priceGap;
+          } else {
+            rangeInputValues[1].value = minVal + priceGap;
+          }
+        } else {
+          priceInputValues[0].value = minVal;
+          priceInputValues[1].value = maxVal;
+          rangeValue.style.left = `${(minVal / rangeInputValues[0].max) * 100}%`;
+          rangeValue.style.right = `${100 - (maxVal / rangeInputValues[1].max) * 100}%`;
+        }
+      });
+    });
+  }
 }
 
-document.querySelector('.file').addEventListener('click', function(event) {
-  event.preventDefault(); // предотвращаем перезагрузку страницы
-  document.querySelector('.input-file').click();
+const mySwiper = document.querySelector(".mySwiper");
+const mySwiper2 = document.querySelector(".mySwiper2");
+if (mySwiper && mySwiper2) {
+  const swiper = new Swiper(mySwiper, {
+    spaceBetween: 20,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const swiper2 = new Swiper(mySwiper2, {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+}
+
+const fileButton = document.querySelector('.file');
+const inputFile = document.querySelector('.input-file');
+if (fileButton && inputFile) {
+  fileButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    inputFile.click();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbs = document.querySelectorAll(".aside__thumb");
+  const sections = [
+    "dashboard",
+    "delivery-adress",
+    "contacts-info",
+    "subscription-info",
+    "loal-program"
+  ];
+
+  function activate(index) {
+    // Убираем классы active у всех элементов
+    thumbs.forEach(thumb => thumb.classList.remove("active"));
+    sections.forEach(section => {
+      const element = document.querySelector(`.${section}`);
+      if (element) element.classList.remove("active");
+    });
+
+    // Добавляем класс active текущему thumb и соответствующему разделу
+    thumbs[index].classList.add("active");
+    const activeSection = document.querySelector(`.${sections[index]}`);
+    if (activeSection) activeSection.classList.add("active");
+  }
+
+  // Устанавливаем начальное состояние
+  activate(0);
+
+  // Добавляем обработчики событий
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => activate(index));
+  });
 });
+
