@@ -375,27 +375,61 @@ document.addEventListener("DOMContentLoaded", () => {
     "subscription-info",
     "loal-program"
   ];
+  const loginElement = document.querySelector(".login");
 
   function activate(index) {
-    // Убираем классы active у всех элементов
+    // Убираем классы active у всех thumbs
     thumbs.forEach(thumb => thumb.classList.remove("active"));
+
+    // Убираем классы active у всех секций, если они существуют
     sections.forEach(section => {
       const element = document.querySelector(`.${section}`);
-      if (element) element.classList.remove("active");
+      if (element) {
+        element.classList.remove("active");
+      }
+      // Удаляем дополнительные классы из loginElement
+      if (loginElement) {
+        loginElement.classList.remove(`${section}-active`);
+      }
     });
 
-    // Добавляем класс active текущему thumb и соответствующему разделу
-    thumbs[index].classList.add("active");
+    // Проверяем существование текущего thumb и активируем его
+    if (thumbs[index]) {
+      thumbs[index].classList.add("active");
+    }
+
+    // Проверяем существование текущей секции и активируем ее
     const activeSection = document.querySelector(`.${sections[index]}`);
-    if (activeSection) activeSection.classList.add("active");
+    if (activeSection) {
+      activeSection.classList.add("active");
+    }
+
+    // Добавляем дополнительный класс в loginElement
+    if (loginElement) {
+      loginElement.classList.add(`${sections[index]}-active`);
+    }
   }
 
-  // Устанавливаем начальное состояние
-  activate(0);
+  // Устанавливаем начальное состояние, если thumbs не пустой
+  if (thumbs.length > 0) {
+    activate(0);
+  }
 
   // Добавляем обработчики событий
   thumbs.forEach((thumb, index) => {
     thumb.addEventListener("click", () => activate(index));
+  });
+});
+
+
+document.querySelectorAll('.plans__item-thumbs').forEach(thumbnail => {
+  const buttons = thumbnail.querySelectorAll('button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('active')); // Убираем класс active у всех кнопок
+      button.classList.add('active'); // Добавляем класс active только к нажатой кнопке
+    });
   });
 });
 
