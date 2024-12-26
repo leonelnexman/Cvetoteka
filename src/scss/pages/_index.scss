@@ -460,6 +460,7 @@
 			top: 0rem;
 			right: auto;
 			left: 0rem;
+			width: 100%;
 		}
 		img{
 			position: relative;
@@ -472,6 +473,7 @@
 			@media (max-width: 700px){
 				width: 110%;
 				height: 100%;
+				max-height: 100%;
 			}
 		}
 	}
@@ -7435,6 +7437,31 @@ color: #453c3c;
 		}
 
 	}
+	.payments{
+		&__thumbs{
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+			margin-bottom: 3rem;	
+			background: #f0f0f1;
+			padding: 0.6rem;
+			border-radius: 1.2rem;
+		}
+		&__thumb{
+			padding: 1.2rem 2rem;
+			white-space: nowrap;
+			font: 500 1.8rem / 1 $font-family;
+			border-radius: 1.2rem;
+			color: rgba(69, 60, 60, 0.5);
+			&.active{
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+				background: #fff;
+				font: 500 1.8rem / 1 $font-family;
+				letter-spacing: -0.02em;
+				color: #453c3c;
+			}
+		}
+	}
 	.payment{
 		padding: 4rem;
 		width: 78.5rem;
@@ -7445,6 +7472,20 @@ color: #453c3c;
 			letter-spacing: 0.02em;
 			color: #453c3c;	
 			margin-bottom: 3rem;
+		}
+		&.payment__wrap1{
+			.payment__banner{
+				display: block;
+			}
+		}
+		.payment__banner{
+			display: none;
+		}
+		&__wrap{
+			display: none;
+			&.active{
+				display: block;
+			}
 		}
 		&__banner{
 			width: 100%;
@@ -7518,6 +7559,9 @@ color: #453c3c;
 			margin-bottom: 2rem;		
 		}
 		&__block-input{
+			&.top-input{
+				margin-bottom: 5rem;
+			}
 			div{
 				font: 600 1.6rem / 1 $font-family;
 				margin-bottom: 0.8rem;
@@ -7563,8 +7607,18 @@ color: #453c3c;
 			}	
 		}
 		.flex{
-			display: flex;
+			display: none;
 			flex-direction: row;
+			&.active{
+				display: flex;
+			}
+		}
+	}
+	.fast{
+		font: 500 1.6rem / 1 $font-family;
+		color: #453c3c;
+		span{
+			font: 700 1.6rem / 1 $font-family;
 		}
 	}
 	.payment__block-inner{
@@ -7609,5 +7663,48 @@ color: #453c3c;
 		}
 	}
 }
+
+.fancybox__container{
+	z-index: 77777777777777777777 !important;
+}
+
+.fancybox__nav .carousel__button.is-next{
+	width: 4.2rem;
+	height: 4.2rem;
+	background: url('../images/next.png');
+	background-size: cover;
+	right: 40rem !important;
+	svg{
+		display: none;
+	}
+}
+
+.fancybox__nav .carousel__button.is-prev{
+	width: 4.2rem;
+	height: 4.2rem;
+	background: url('../images/prev.png');
+	background-size: cover;
+	left: 40rem !important;
+	svg{
+		display: none;
+	}
+}
+
+.carousel__slide{
+	filter: brightness(50%);
+}
+
+.fancybox__thumbs .carousel__slide.is-nav-selected{
+	filter: brightness(100%);
+}
+
+.fancybox__thumbs .carousel__slide.is-nav-selected .fancybox__thumb::after{
+	display: none;
+}
+
+
+
+
+
 
 
