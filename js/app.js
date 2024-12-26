@@ -17,18 +17,36 @@ if (mainElement) {
   });
 }
 
-const categoryProductsElement = document.querySelector('.category-products');
-if (categoryProductsElement) {
-  const products = new Swiper(categoryProductsElement, {
+const categoryProductsElements = document.querySelectorAll('.category-products');
+
+categoryProductsElements.forEach((categoryProductsElement, index) => {
+  // Добавить уникальные классы для навигации и пагинации
+  const nextEl = `.category-products__next-${index}`;
+  const prevEl = `.category-products__prev-${index}`;
+  const paginationEl = `.swiper-pagination-${index}`;
+
+  // Найти элементы навигации и пагинации внутри текущего слайдера
+  const nextButton = categoryProductsElement.querySelector('.category-products__next');
+  const prevButton = categoryProductsElement.querySelector('.category-products__prev');
+  const pagination = categoryProductsElement.querySelector('.swiper-pagination');
+
+  // Добавить уникальные классы
+  if (nextButton) nextButton.classList.add(`category-products__next-${index}`);
+  if (prevButton) prevButton.classList.add(`category-products__prev-${index}`);
+  if (pagination) pagination.classList.add(`swiper-pagination-${index}`);
+
+  // Инициализация Swiper для текущего слайдера
+  new Swiper(categoryProductsElement, {
     slidesPerView: 4,
     speed: 1000,
     spaceBetween: 20,
     navigation: {
-      nextEl: '.category-products__next',
-      prevEl: '.category-products__prev',
+      nextEl: nextEl, // Уникальный класс для кнопки "вперед"
+      prevEl: prevEl, // Уникальный класс для кнопки "назад"
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: paginationEl, // Уникальный класс для пагинации
+      clickable: true,
     },
     breakpoints: {
       1024: {
@@ -42,7 +60,7 @@ if (categoryProductsElement) {
       },
     },
   });
-}
+});
 
 const reviewsElement = document.querySelector('.reviews-slider');
 if (reviewsElement) {
@@ -432,4 +450,88 @@ document.querySelectorAll('.plans__item-thumbs').forEach(thumbnail => {
     });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const fancyboxElements = document.querySelectorAll("[data-fancybox]");
+
+  if (fancyboxElements.length > 0) {
+      Fancybox.bind("[data-fancybox]", {
+          Toolbar: {
+              display: ["close"], // Оставляем только кнопку закрытия
+          },
+          Thumbs: {
+              autoStart: true,
+              axis: "x",
+          },
+      });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbButtons = document.querySelectorAll(".payment__thumb");
+  const wraps = document.querySelectorAll(".payment__wrap");
+  const payment = document.querySelector(".payment");
+
+  if (!payment) return; // Проверяем, что элемент .payment существует
+
+  thumbButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+          // Убираем класс active у всех кнопок и секций
+          thumbButtons.forEach(btn => btn.classList.remove("active"));
+          wraps.forEach(wrap => wrap.classList.remove("active"));
+
+          // Добавляем класс active текущей кнопке и соответствующей секции
+          button.classList.add("active");
+          wraps[index].classList.add("active");
+
+          // Убираем предыдущие классы payment__wrapN
+          payment.className = payment.className
+              .split(" ")
+              .filter(cls => !cls.startsWith("payment__wrap"))
+              .join(" ");
+
+          // Добавляем новый класс payment__wrapN на класс payment
+          payment.classList.add(`payment__wrap${index + 1}`);
+      });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const thumbButtons = document.querySelectorAll(".payments__thumb");
+  const wraps = document.querySelectorAll(".thumb-cont");
+  const payment = document.querySelector(".payment");
+
+  if (!payment) return; // Проверяем, что элемент .payment существует
+
+  thumbButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+          // Убираем класс active у всех кнопок и секций
+          thumbButtons.forEach(btn => btn.classList.remove("active"));
+          wraps.forEach(wrap => wrap.classList.remove("active"));
+
+          // Добавляем класс active текущей кнопке и соответствующей секции
+          button.classList.add("active");
+          wraps[index].classList.add("active");
+
+          // Убираем предыдущие классы payment__block-inner
+          payment.className = payment.className
+              .split(" ")
+              .filter(cls => !cls.startsWith("thumb-cont"))
+              .join(" ");
+
+          // Добавляем новый класс payment__block-innerN на класс payment
+          payment.classList.add(`thumb-cont${index + 1}`);
+      });
+  });
+});
+
+
+
+
+
+
+
+
+
 
