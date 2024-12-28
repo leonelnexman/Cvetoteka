@@ -168,7 +168,7 @@ if (View) {
       700: {
         slidesPerView: 4,
       },
-      1000: {
+      1050: {
         slidesPerView: 6,
       },
     },
