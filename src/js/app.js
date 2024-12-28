@@ -49,7 +49,7 @@ categoryProductsElements.forEach((categoryProductsElement, index) => {
       clickable: true,
     },
     breakpoints: {
-      1024: {
+      1050: {
         slidesPerView: 4,
       },
       768: {
@@ -145,7 +145,7 @@ if (productsAdd) {
       700: {
         slidesPerView: 3,
       },
-      962: {
+      1050: {
         slidesPerView: 4,
       },
     },

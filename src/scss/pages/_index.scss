@@ -837,6 +837,12 @@
 	}
 }
 
+.swiper-wrapper{
+	.product-item{
+		width: 100% !important;
+	}
+}
+
 .product-item{
 	width: 100%;
 	@media (max-width: 1150px){
@@ -1489,6 +1495,8 @@
 			@media (max-width: 1150px){
 				left: 50%;
 				transform: translate(-50%);
+				width: 23.7rem;
+				height: 42rem;
 			}
 			@media (max-width: 700px){
 				width: 27.2rem;
@@ -7291,6 +7299,9 @@ color: #453c3c;
 		padding: 4rem;
 		position: sticky;
 		top: 3rem;
+		@media (max-width: 1050px){
+			width: 36.5rem;
+		}
 		&__title{
 			font: 600 3rem / 1 $font-family;
 			letter-spacing: 0.02em;
@@ -7512,6 +7523,10 @@ color: #453c3c;
 		width: 78.5rem;
 		border: 0.1rem solid rgba(69, 60, 60, 0.5);
 		border-radius: 2.4rem;
+		@media (max-width: 1050px){
+			width: 36.5rem;
+			padding: 3rem;
+		}
 		&__title{
 			font: 600 3rem / 1 $font-family;
 			letter-spacing: 0.02em;
@@ -7540,6 +7555,10 @@ color: #453c3c;
 			position: relative;
 			height: 24.6rem;
 			margin-bottom: 3rem;
+			@media (max-width: 1050px){
+				height: 40.6rem;
+				padding: 3rem 2rem;
+			}
 			p{
 				font: 500 1.8rem / 1 $font-family;
 				color: #453c3c;	
@@ -7551,6 +7570,12 @@ color: #453c3c;
 				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
 				background: #fff;
 				border-radius: 2.7rem;
+				@media (max-width: 1050px){
+					position: absolute;
+					left: 2rem;
+					bottom: 3rem;
+					width: 26.5rem;
+				}
 			}
 			img{
 				position: absolute;
@@ -7558,6 +7583,10 @@ color: #453c3c;
 				height: 20rem;
 				top: 0;
 				right: 4rem;
+				@media (max-width: 1050px){
+					top: auto;
+					bottom: 11rem;
+				}
 			}
 		}
 		&__banner-title{
@@ -7565,6 +7594,9 @@ color: #453c3c;
 			letter-spacing: 0.02em;
 			color: #453c3c;	
 			margin-bottom: 1rem;
+			@media (max-width: 1050px){
+				font: 600 2.8rem / 1 $font-family;
+			}
 		}
 		&__thumbs{
 			display: flex;
@@ -7574,6 +7606,9 @@ color: #453c3c;
 			background: #f0f0f1;
 			padding: 0.6rem;
 			border-radius: 1.2rem;
+			@media (max-width: 1050px){
+				flex-direction: column;
+			}
 		}
 		&__thumb{
 			padding: 1.2rem 1rem;
