@@ -5534,7 +5534,7 @@ color: #453c3c;
 		font: 500 1.4rem / 1 $font-family;
 		margin-right: 4.5rem;
 		@media (max-width: 1150px){
-			margin-right: 10.5rem;
+			margin-right: 11.1rem;
 		}
 		@media (max-width: 700px){
 			margin-top: 1.5rem;
@@ -5636,9 +5636,14 @@ color: #453c3c;
 		&__item{
 			display: flex;
 			gap: 3rem;
+			&.cl{
+				span{
+					width: 27rem;
+				}
+			}
 			span{
 				display: block;
-				width: 21rem;
+				width: 14rem;
 				font: 500 1.8rem / 1 $font-family;
 				color: #453c3c;
 			}
@@ -6735,7 +6740,7 @@ color: #453c3c;
 				opacity: 1;
 				background: #fff;
 				border-color: transparent;
-				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12);
+				box-shadow: 0 0.4rem 1.7rem 0 rgba(0, 0, 0, .12);
 			}
 			p{
 				font: 500 1.6rem / 1 $font-family;
@@ -8062,6 +8067,16 @@ color: #453c3c;
 			padding-top: 0;
 			font: 600 1.6rem / 1 $font-family;
 		}
+	}
+}
+
+.chars__item{
+	input{
+		border: 1px solid rgba(69, 60, 60, 0.3);
+		border-radius: 0.8rem;
+		padding: 1.2rem 1.5rem;
+		width: 14.5rem;
+		background: #fff;
 	}
 }
 
