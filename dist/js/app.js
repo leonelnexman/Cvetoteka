@@ -38,7 +38,6 @@ categoryProductsElements.forEach((categoryProductsElement, index) => {
   // Инициализация Swiper для текущего слайдера
   new Swiper(categoryProductsElement, {
     slidesPerView: 4,
-    speed: 1000,
     spaceBetween: 20,
     navigation: {
       nextEl: nextEl, // Уникальный класс для кнопки "вперед"

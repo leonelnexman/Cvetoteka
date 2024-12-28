@@ -7990,6 +7990,15 @@ color: #453c3c;
 	}
 }
 
+.sales-sizes__item{
+	@media (max-width: 1150px) {
+		height: 31.5rem;
+	}
+	@media (max-width: 700px) {
+		height: 28rem;
+	}
+}
+
 
 
 
