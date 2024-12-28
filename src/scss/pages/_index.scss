@@ -7999,6 +7999,57 @@ color: #453c3c;
 	}
 }
 
+.attention__item p{
+	text-align: center;
+}
+.questions__socials svg{
+	min-width: 4.7rem;
+    min-height: 4.7rem;
+	width: 4.7rem;
+    height: 4.7rem;
+}
+
+.moskow-delivery .li{
+	margin-bottom: 1.5rem;
+}
+
+.moskow-delivery__flex-item{
+	@media (max-width: 700px) {
+		font: 500 1.4rem / 1 $font-family;
+		letter-spacing: 0.02em;
+		color: #453c3c;
+		padding-top: 2rem;
+		position: relative;
+	}
+}
+
+.moskow-delivery__flex{
+	position: relative;
+	@media (max-width: 700px) {
+		gap: 3rem;
+	}
+}
+
+.moskow-delivery__flex-item:nth-child(1){
+	@media (max-width: 700px) {
+		font: 600 1.6rem / 1 $font-family;
+		display: block; 
+		position: absolute;
+		top: 1rem;
+	}
+}
+
+.moskow-delivery__flex-item:nth-child(2){
+	display: none;
+	@media (max-width: 700px) {
+		font: 600 1.6rem / 1 $font-family;
+		display: block; 
+		position: absolute;
+		top: 1rem;
+		left: 18rem;
+	}
+}
+
 
 
 
