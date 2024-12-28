@@ -7980,6 +7980,16 @@ color: #453c3c;
 	}
 }
 
+.notify-block{
+	@media (max-width: 1150px) {
+		top: 10rem;
+		right: 1.5rem;
+		.notify .wrapper{
+			width: 33rem;
+		}
+	}
+}
+
 
 
 
