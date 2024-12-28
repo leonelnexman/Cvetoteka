@@ -6012,6 +6012,9 @@ color: #453c3c;
 
 .add{
 	position: relative;
+	@media (max-width: 1150px){
+		margin-bottom: 7rem;
+	}
 	.sales{
 		.lable {
 			background: #fff;
@@ -6086,6 +6089,9 @@ color: #453c3c;
 .watched{
 	position: relative;
 	margin-bottom: 10rem;
+	@media (max-width: 1150px){
+		margin-bottom: 7rem;
+	}
 	&__title{
 		font: 600 4.8rem / 1 $font-family;
 		letter-spacing: 0.02em;
@@ -7294,6 +7300,10 @@ color: #453c3c;
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		@media (max-width: 700px){
+			flex-direction: column-reverse;
+			gap: 3rem;
+		}
 	}
 	.cart{
 		border-radius: 2.4rem;
@@ -7306,11 +7316,19 @@ color: #453c3c;
 			width: 35.5rem;
 			padding: 4rem 3rem;
 		}
+		@media (max-width: 700px){
+			position: static;
+			width: 100%;
+			padding: 4rem 2rem;
+		}
 		&__title{
 			font: 600 3rem / 1 $font-family;
 			letter-spacing: 0.02em;
 			color: #453c3c;
-			margin-bottom: 3rem;	
+			margin-bottom: 3rem;
+			@media (max-width: 1050px){
+				font: 600 2.8rem / 1 $font-family;
+			}	
 		}
 		&__products{
 			display: flex;
@@ -7326,17 +7344,32 @@ color: #453c3c;
 			img{
 				border-radius: 2rem;
 				width: 10rem;
-				height: 10rem;	
+				height: 10rem;
+				@media (max-width: 1050px){
+					width: 7rem;
+					height: 7rem;
+				}
+			}
+		}
+		&__product-name{
+			@media (max-width: 1050px){
+				font-size: 1.3rem;
 			}
 		}
 		&__product-flex{
 			display: flex;
 			gap: 2rem;
+			@media (max-width: 1050px){
+				gap: 1.1rem;
+			}
 		}
 		&__product-inner{
 			display: flex;
 			flex-direction: column;
 			gap: 1.6rem;
+			@media (max-width: 1050px){
+				gap: 0.4rem;
+			}
 		}
 		&__product-btns{
 			background: #fff;
@@ -7345,15 +7378,26 @@ color: #453c3c;
 			display: flex;
 			align-items: center;
 			border-radius: 2.7rem;
+			@media (max-width: 1050px){
+				width: 10.3rem;
+			}
 			button{
 				width: 4.4rem;
 				height: 4.4rem;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				@media (max-width: 1050px){
+					width: 3.8rem;
+					height: 3.8rem;
+				}
 				svg{
 					width: 1.8rem;
 					height: 1.8rem;
+					@media (max-width: 1050px){
+						width: 1.2rem;
+						height: 1.2rem;
+					}
 				}
 			}
 		}
@@ -7366,10 +7410,18 @@ color: #453c3c;
 			svg{
 				width: 3.2rem;
 				height: 3.2rem;
+				@media (max-width: 1050px){
+					width: 2.8rem;
+					height: 2.8rem;
+				}
 			}
 		}
 		.price{
 			font: 600 2rem / 1 $font-family;
+			@media (max-width: 1050px){
+				font: 600 1.6rem / 1 $font-family;
+				white-space: nowrap;
+			}
 		}
 		&__product-info{
 			padding-top: 2rem;
@@ -7386,6 +7438,9 @@ color: #453c3c;
 			align-items: center;
 			span{
 				font: 600 2rem / 1 $font-family;
+				@media (max-width: 1050px){
+					font: 600 1.8rem / 1 $font-family;
+				}
 				color: #453c3c;
 			}
 			&.sale{
@@ -7459,6 +7514,15 @@ color: #453c3c;
 			font: 600 1.6rem / 1.2 $font-family;
 			color: #453c3c;
 			align-items: center;
+			@media (max-width: 1050px){
+				font: 600 1.4rem / 1.2 $font-family;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.5rem;
+				br{
+					display: none;
+				}
+			}
 			input{
 				border: 0.1rem solid rgba(69, 60, 60, 0.5);
 				border-radius: 0.8rem;
@@ -7467,6 +7531,9 @@ color: #453c3c;
 				font: 500 1.8rem / 1 $font-family;
 				color: rgba(69, 60, 60, 0.5);
 				background: #fff;
+				@media (max-width: 1050px){
+					width: 100%;
+				}
 			}
 		}
 		.price-itog{
@@ -7478,6 +7545,12 @@ color: #453c3c;
 			color: #453c3c;
 			width: 100%;
 			padding-top: 2rem;
+			@media (max-width: 1050px){
+				font: 600 2.2rem / 1 $font-family;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 1rem;
+			}
 		}
 		&__product-cash{
 			display: flex;
@@ -7486,6 +7559,12 @@ color: #453c3c;
 			font: 600 1.6rem / 1.2 $font-family;
 			text-transform: uppercase;
 			color: #453c3c;
+			@media (max-width: 1050px){
+				font: 600 1.4rem / 1 $font-family;
+				text-transform: none;
+				gap: 1rem;
+				white-space: nowrap;
+			}
 		}
 		.toggler{
 			display: flex;
@@ -7539,6 +7618,10 @@ color: #453c3c;
 			width: 36.5rem;
 			padding: 3rem;
 		}
+		@media (max-width: 1050px){
+			width: 100%;
+			padding: 3rem 2rem;
+		}
 		&__title{
 			font: 600 3rem / 1 $font-family;
 			letter-spacing: 0.02em;
@@ -7575,6 +7658,9 @@ color: #453c3c;
 				font: 500 1.8rem / 1 $font-family;
 				color: #453c3c;	
 				margin-bottom: 2rem;
+				@media (max-width: 700px){
+					font: 500 1.6rem / 1 $font-family;
+				}
 			}
 			button{
 				font: 500 1.8rem / 1 $font-family;	
@@ -7587,6 +7673,9 @@ color: #453c3c;
 					left: 2rem;
 					bottom: 3rem;
 					width: 26.5rem;
+				}
+				@media (max-width: 700px){
+					width: 25rem;
 				}
 			}
 			img{
@@ -7638,6 +7727,9 @@ color: #453c3c;
 		}
 		&__block{
 			margin-bottom: 6rem;
+			@media (max-width: 1050px){
+				margin-bottom: 4rem;
+			}
 		}
 		&__block-inner{
 			display: flex;
