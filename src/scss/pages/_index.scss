@@ -8050,6 +8050,21 @@ color: #453c3c;
 	}
 }
 
+.moskow-delivery__top{
+	.moskow-delivery__flex-item{
+		&:nth-child(1){
+			@media (max-width: 700px) {
+				display: none;
+			}
+		}
+		@media (max-width: 700px) {
+			position: static;
+			padding-top: 0;
+			font: 600 1.6rem / 1 $font-family;
+		}
+	}
+}
+
 
 
 
