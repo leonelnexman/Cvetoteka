@@ -573,7 +573,7 @@
 				}
 			}
 			svg path{
-				transform: translate(1.9rem, -0.8rem) rotate(45deg);
+				transform: rotate(45deg);
 			}
 		}
 		svg{
@@ -584,6 +584,9 @@
 			height: 4.3rem;
 			transition: all 0.3s;
 			stroke: transparent;
+			path{
+				transform-origin: center center;
+			}
 			@media (max-width: 700px){
 				path{
 					stroke: #453C3C;
@@ -7300,7 +7303,8 @@ color: #453c3c;
 		position: sticky;
 		top: 3rem;
 		@media (max-width: 1050px){
-			width: 36.5rem;
+			width: 35.5rem;
+			padding: 4rem 3rem;
 		}
 		&__title{
 			font: 600 3rem / 1 $font-family;
@@ -7502,6 +7506,14 @@ color: #453c3c;
 			background: #f0f0f1;
 			padding: 0.6rem;
 			border-radius: 1.2rem;
+			@media (max-width: 1050px){
+				flex-direction: column;
+			}
+		}
+		.thumb-cont{
+			@media (max-width: 1050px){
+				flex-direction: column !important;
+			}
 		}
 		&__thumb{
 			padding: 1.2rem 2rem;
@@ -7670,7 +7682,21 @@ color: #453c3c;
 			font: 500 1.6rem / 1 $font-family;
 			text-transform: uppercase;
 			color: #453c3c;
+			display: flex;
+			justify-content: space-between;
+			@media (max-width: 1050px){
+				flex-direction: column;
+				gap: 1rem;
+				align-items: center;
+			}
+			.styled-checkbox+label:before{
+				min-width: 3rem;
+				min-height: 3rem;	
+			}
 			label{
+				@media (max-width: 1050px){
+					width: 26rem;
+				}
 				svg{
 					margin-left: auto;
 					height: 2.8rem;
@@ -7689,6 +7715,9 @@ color: #453c3c;
 		.flex{
 			display: none;
 			flex-direction: row;
+			@media (max-width: 1050px) {
+				flex-direction: column;
+			}
 			&.active{
 				display: flex;
 			}
