@@ -296,6 +296,16 @@
             </nav>
         </header>
         <main class="main">
+            <div class="breadcrumbs">
+                <div class="container">
+                    <a href="">
+                        Главная
+                    </a>
+                    <a href="">
+                        Корзина
+                    </a>
+                </div>
+            </div>
             <section class="payment-cart">
                 <div class="container">
                     <div class="payment payment__wrap1">
@@ -331,7 +341,7 @@
                                     <div class="payment__block-call">
                                         <input class="styled-checkbox" id="checkbox1111111" type="checkbox" value="value1">
                                         <label for="checkbox1111111">
-                                              г. Санкт-Петербург, ул. Парковая, д. 6, лит. А, пом. 21Н №10
+                                              Позвонить перед выездом курьера
                                         </label>
                                     </div>
                                 </div>
@@ -419,7 +429,7 @@
                                     <div class="payment__block-call">
                                         <input class="styled-checkbox" id="checkbox1111111" type="checkbox" value="value1">
                                         <label for="checkbox1111111">
-                                              г. Санкт-Петербург, ул. Парковая, д. 6, лит. А, пом. 21Н №10
+                                              Позвонить перед выездом курьера
                                         </label>
                                     </div>
                                 </div>
@@ -456,8 +466,17 @@
                                 <button class="payments__thumb active">Точное время доставки</button>
                             </div>
                             <div class="payment__block-inner flex thumb-cont">
-                                <div class="fast">
-                                    Бесплатная доставка
+                                <div class="payment__block-input">
+                                    <div>Дата доставки <span>*</span></div>
+                                    <input type="date" placeholder="ДД/ММ/ГГ">
+                                </div>
+                                <div class="payment__block-input">
+                                    <div>Время от <span>*</span></div>
+                                    <input type="text" placeholder="от">
+                                </div>
+                                <div class="payment__block-input">
+                                    <div>Время до <span>*</span></div>
+                                    <input type="text" placeholder="до"></input>
                                 </div>
                             </div>
                             <div class="payment__block-inner flex thumb-cont">
@@ -570,7 +589,7 @@
                                     <textarea placeholder="Ваш комментарий"></textarea>
                                 </div>
                                 <button>Оформить заказ</button>
-                                <div class="payment__block-call">
+                                <div class="payment__block-call end-call">
                                     <input class="styled-checkbox" id="checkbox1333" type="checkbox" value="value1">
                                     <label for="checkbox1333">
                                         <div class="">Нажимая «оформить заказ», вы соглашаетесь <a href="#">со сбором и <br> обработкой персональных данных.</a></div>

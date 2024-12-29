@@ -8192,6 +8192,26 @@ color: #453c3c;
 	}
 }
 
+.time .payment__block-input{
+	position: relative;
+	&:nth-child(1){
+		&::before{
+			background: url('../images/i1.png');
+		}	
+	}
+	&::before{
+		content: '';
+		position: absolute;
+		background: url('../images/i3.png');
+		width: 2.4rem;
+		height: 2.4rem;
+		background-size: cover !important;
+		right: 1.5rem;
+		top: 4rem;
+		z-index: 777;
+	}
+}
+
 
 
 
