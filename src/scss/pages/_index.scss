@@ -6386,6 +6386,11 @@ color: #453c3c;
 		.card{
 			display: block;
 		}
+		@media (max-width: 1150px) {
+			.account-info{
+				display: flex;
+			}
+		}
 	}
 	.subscribe{
 		border-radius: 2.4rem;
@@ -6611,7 +6616,7 @@ color: #453c3c;
 			display: none;
 		}
 		@media (max-width: 1150px){
-			height: 29.5rem;
+			height: 28.8rem;
 			padding: 3rem 3rem;
 		}
 		@media (max-width: 700px){
@@ -6671,6 +6676,9 @@ color: #453c3c;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	@media (max-width: 1150px){
+		display: none;
+	}	
 }
 
 .login-wrapper{
@@ -8077,6 +8085,110 @@ color: #453c3c;
 		padding: 1.2rem 1.5rem;
 		width: 14.5rem;
 		background: #fff;
+	}
+}
+
+
+
+
+.payment__block-call{
+	@media (max-width: 700px) {
+		.styled-checkbox:checked+label:after{
+			top: 0.7rem !important;
+		}	
+	}
+}
+
+.payment__block-payment{
+	@media (max-width: 700px) {
+		.styled-checkbox:checked+label:after{
+			top: 0rem !important;
+		}	
+	}
+}
+
+.end-call{
+	@media (max-width: 1150px) {
+		.styled-checkbox:checked+label:after{
+			top: 1.4rem !important;
+		}	
+	}
+}
+
+.payment-cart .payment__banner-title{
+	@media (max-width: 700px) {
+		font-size: 2.6rem;	
+	}
+}
+
+.payment-cart .payment{
+	@media (max-width: 1150px) {
+		width: 36.5rem !important;	
+	}
+	@media (max-width: 700px) {
+		width: 100% !important;
+	}
+}
+
+.aside{
+	@media (max-width: 1150px) {
+		width: 23.7rem;
+		min-height: calc(100vh - 6rem) !important;
+	}
+	@media (max-width: 700px) {
+		width: 100%;
+		min-height: 100% !important;
+	}
+}
+
+.login-main{
+	@media (max-width: 1150px) {
+		.subscription-info{
+			min-height: calc(100vh - 16.5rem);
+		}
+		.loal-program {
+			min-height: calc(100vh - 16.5rem);
+		}
+		.contacts-info{
+			min-height: calc(100vh - 16.5rem);
+		}
+		.delivery-adress {
+			min-height: calc(100vh - 16.5rem);
+		}
+	}
+	@media (max-width: 700px) {
+		.subscription-info{
+			min-height: auto;
+		}
+		.loal-program {
+			min-height: auto;
+		}
+		.contacts-info{
+			min-height: auto;
+		}
+		.delivery-adress {
+			min-height: auto;
+		}
+	}
+}
+
+.account-adress{
+	@media (max-width: 1150px) {
+		margin-bottom: 0 !important;
+	}
+}
+
+.bonus{
+	@media (max-width: 1150px) {
+		margin-bottom: 0 !important;
+	}	
+}
+
+.contacts-info__policy{
+	@media (max-width: 700px) {
+		.styled-checkbox:checked+label:after{
+			top: 0.7rem !important;
+		}
 	}
 }
 
