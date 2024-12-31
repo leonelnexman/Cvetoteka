@@ -1801,7 +1801,6 @@
 		position: relative;
 		@media (max-width: 1150px){
 			width: 34rem !important;
-			padding: 5rem 2rem;
 		}
 	}
 	&__inner{
@@ -1879,12 +1878,15 @@
 		margin-bottom: 2rem;
 		@media (max-width: 1150px){
 			width: 100%;
-			flex-direction: column;
+			
 		}
 		button{
 			font: 600 1.4rem / 1 $font-family;
 			padding: 1.2rem 2.5rem;
 			border-radius: 1.2rem;
+			@media (max-width: 1150px){
+					padding: 1.2rem 2rem;			
+			}
 			&.active{
 				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
 				background: #fff;
@@ -2022,6 +2024,10 @@
 		width: 39rem;
 		padding: 4rem 3rem;
 		position: relative;
+		@media (max-width: 1150px){
+			width: 34rem;
+			padding: 4rem 2rem !important;
+		}
 		.block{
 			display: none;
 			&.active{
@@ -2079,6 +2085,9 @@
 			text-decoration: underline;
 			text-decoration-skip-ink: none;
 			color: #453c3c;
+			@media (max-width: 1150px){
+				font: 500 1.8rem / 1 $font-family;
+			}
 		}
 	}
 	&__btn-log{
@@ -6176,6 +6185,7 @@ color: #453c3c;
 	@media (max-width: 1150px){
 		height: auto;
 		padding: 3rem;
+		align-items: flex-start;
 	}
 	@media (max-width: 700px){
 		flex-direction: column;
@@ -6241,6 +6251,9 @@ color: #453c3c;
 		color: #453c3c;
 		transition: all 0.3s;
 		cursor: pointer;
+		@media (max-width: 1150px){
+			font-size: 1.4rem;
+		}
 		&.active{
 			color: #fff;
 			background: #453c3c;
@@ -6264,9 +6277,8 @@ color: #453c3c;
 	border-radius: 1.2rem;
 	color: #453c3c;
 	transition: all 0.3s;
-	position: absolute;
-	bottom: 4rem;
 	width: 22.7rem;
+	height: 4.6rem;
 	&.mobile{
 		display: none;
 		@media (max-width: 700px){
@@ -6608,11 +6620,14 @@ color: #453c3c;
 		position: relative;
 		border-radius: 2.4rem;
 		&.silver{
-			background: url('../images/silver.png');
-			background-repeat: no-repeat;
-			background-size: cover !important;
+			// background: url('../images/silver.png');
+			// background-repeat: no-repeat;
+			// background-size: cover !important;
+			// background: #F0F0F1;
+			border: .1rem solid rgba(0, 0, 0, 0) !important;
+			background: linear-gradient(to right bottom, #F4F4F6, #F4F4F6) padding-box, linear-gradient(to right top, #F4F4F6, #292A29) border-box;
 			@media (max-width: 700px){
-				background: url('../images/silver-mobile.png');
+				// background: url('../images/silver-mobile.png');
 			}
 		}
 		@media (max-width: 700px){
@@ -6689,6 +6704,12 @@ color: #453c3c;
 	gap: 2rem;
 	@media (max-width: 1150px){
 		display: none;
+	}	
+}
+
+.account{
+	@media (max-width: 1150px){
+		overflow: visible;
 	}	
 }
 
@@ -8142,13 +8163,21 @@ color: #453c3c;
 }
 
 .aside{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	@media (max-width: 1150px) {
+		position: sticky;
+		top: 3rem;
 		width: 23.7rem;
 		min-height: calc(100vh - 6rem) !important;
+		gap: 2rem;
 	}
 	@media (max-width: 700px) {
+		position: static;
 		width: 100%;
 		min-height: 100% !important;
+		height: auto !important;
 	}
 }
 
@@ -8185,6 +8214,7 @@ color: #453c3c;
 
 .account-adress{
 	@media (max-width: 1150px) {
+		overflow: visible;
 		margin-bottom: 0 !important;
 	}
 }
