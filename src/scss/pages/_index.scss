@@ -570,9 +570,6 @@
 			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 			svg circle{
 				stroke: #453c3c;
-				@media (max-width: 700px){
-					stroke: none;
-				}
 			}
 			svg path{
 				transform: rotate(45deg);
@@ -582,7 +579,9 @@
 			position: absolute;
 			left: 3rem;
 			bottom: 3rem;
-			width: 4.3rem;
+			min-width: 4.3rem;
+			min-height: 4.3rem;
+			width: 4.4rem;
 			height: 4.3rem;
 			transition: all 0.3s;
 			stroke: transparent;
