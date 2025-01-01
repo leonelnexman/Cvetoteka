@@ -5484,6 +5484,7 @@ color: #453c3c;
 		font: 600 1.4rem / 1 $font-family;
 		text-align: center;
 		color: #453c3c;
+		margin-left: auto;
 		@media (max-width: 700px){
 			position: absolute;
 			right: 0rem;
@@ -5539,6 +5540,7 @@ color: #453c3c;
 		gap: 1rem;
 		font: 500 1.4rem / 1 $font-family;
 		margin-right: 4.5rem;
+		white-space: nowrap;
 		@media (max-width: 1150px){
 			margin-right: 11.1rem;
 		}
@@ -5548,6 +5550,8 @@ color: #453c3c;
 		svg{
 			width: 2.5rem;
 			height: 2.5rem;
+			min-width: 2.5rem;
+			min-height: 2.5rem;
 		}
 	}
 	.links{
@@ -7902,6 +7906,9 @@ color: #453c3c;
 	background: url('../images/next.png');
 	background-size: cover;
 	right: 40rem !important;
+	@media (max-width: 1050px) {
+		right: 1.5rem !important;
+	}
 	svg{
 		display: none;
 	}
@@ -7913,6 +7920,9 @@ color: #453c3c;
 	background: url('../images/prev.png');
 	background-size: cover;
 	left: 40rem !important;
+	@media (max-width: 1050px) {
+		left: 1.5rem !important;
+	}
 	svg{
 		display: none;
 	}
