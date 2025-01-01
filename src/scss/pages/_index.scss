@@ -2992,12 +2992,10 @@ color: #453c3c;
 	}
 	.contacts-flex{
 		gap: 0;
-		@media (max-width: 700px){
-			a{
-				margin-right: 1.2rem;
-				&:last-child{
-					margin-right: 0;
-				}
+		a{
+			margin-right: 1.2rem;
+			&:last-child{
+				margin-right: 0;
 			}
 		}
 	}
