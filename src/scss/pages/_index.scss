@@ -7996,6 +7996,9 @@ color: #453c3c;
 		gap: 2rem 0;
 		.freshness-instructions__item{
 			margin-right: 1.4rem;
+			&:nth-child(3){
+				margin-right: 0;
+			}
 			&:last-child{
 				margin-right: 0;
 			}
