@@ -134,12 +134,12 @@ if (productsAdd) {
     slidesPerView: 4,
     speed: 1000,
     spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+    },
     breakpoints: {
       0: {
         slidesPerView: 2,
-        pagination: {
-          el: '.swiper-pagination',
-        },
       },
       700: {
         slidesPerView: 3,
@@ -157,12 +157,12 @@ if (View) {
     slidesPerView: 6,
     speed: 1000,
     spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+    },
     breakpoints: {
       0: {
         slidesPerView: 2,
-        pagination: {
-          el: '.swiper-pagination',
-        },
       },
       700: {
         slidesPerView: 4,
