@@ -8653,6 +8653,13 @@ color: #453c3c;
 	}
 }
 
+.nav__link{
+	&:nth-child(1){
+		border-bottom: 0.1rem solid #453C3C;
+		padding-bottom: 0.3rem;
+	}
+}
+
 
 
 
