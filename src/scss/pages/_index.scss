@@ -8552,19 +8552,43 @@ color: #453c3c;
 				}
 			}
 		}
+		.contacts__item{
+			.svg{
+				width: 5.4rem;
+				height: 5.4rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 0.2rem solid #453C3C;
+				border-radius: 50%;
+			}
+			.svg svg{
+				width: 2.3rem;
+				height: 2.3rem;
+				min-width: 2.3rem;
+				min-height: 2.3rem;
+			}
+		}
 		.contatcs-flex{
 			width: 100%;
 			@media (max-width: 700px){
 				justify-content: space-between;
 				gap: 0;
 			}
+			a{
+				width: 4.7rem;
+				height: 4.7rem;
+				border: 0.1rem solid #453C3C;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+			}
 			svg{
-				@media (max-width: 700px){
-					width: 4.7rem;
-					height: 4.7rem;
-					min-width: 4.7rem;
-					min-height: 4.7rem;
-				}
+				width: auto;
+				height: 1.7rem;
+				min-width: 100%;
+				min-height: 1.7rem;
 			}
 		}
 	}
