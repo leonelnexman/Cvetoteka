@@ -1627,6 +1627,9 @@
 	.container{
 		overflow: hidden;
 	}
+	&__slider{
+		overflow: hidden;
+	}
 	.banner{
 		overflow: hidden;
 		width: 100%;
@@ -8555,6 +8558,8 @@ color: #453c3c;
 		}
 		.contacts__item{
 			.svg{
+				min-width: 5.4rem;
+				min-height: 5.4rem;
 				width: 5.4rem;
 				height: 5.4rem;
 				display: flex;
