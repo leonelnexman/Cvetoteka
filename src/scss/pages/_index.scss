@@ -2787,7 +2787,7 @@ color: #453c3c;
 			top: 0;
 			right: 16rem;
 			@media (max-width: 1150px){
-				right: 0;
+				right: -5rem;
 			}
 			@media (max-width: 700px){
 				top: auto;
@@ -4784,6 +4784,7 @@ color: #453c3c;
 			}
 		}
 		span{
+			font: 600 2.4rem / 1 $font-family;
 			min-width: 5.4rem;
 			min-height: 5.4rem;
 			width: 5.4rem;
@@ -8583,6 +8584,10 @@ color: #453c3c;
 				justify-content: center;
 				align-items: center;
 				border-radius: 50%;
+				transition: all 0.3s;
+				&:hover{
+					background: #453C3C;
+				}
 			}
 			svg{
 				width: auto;
@@ -8591,6 +8596,60 @@ color: #453c3c;
 				min-height: 1.7rem;
 			}
 		}
+	}
+}
+
+.contatcs-freshness .contatcs-flex{
+	width: 100%;
+	@media (max-width: 700px){
+		justify-content: space-between;
+		gap: 0;
+	}
+	a{
+		width: 4.7rem;
+		height: 4.7rem;
+		border: 0.1rem solid #453C3C;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: all 0.3s;
+		&:hover{
+			background: #453C3C;
+		}
+	}
+	svg{
+		width: auto;
+		height: 1.7rem;
+		min-width: 100%;
+		min-height: 1.7rem;
+	}
+}
+
+.contacts .contacts-flex{
+	width: 100%;
+	@media (max-width: 700px){
+		justify-content: space-between;
+		gap: 0;
+	}
+	a{
+		width: 4.7rem;
+		height: 4.7rem;
+		border: 0.1rem solid #453C3C;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: all 0.3s;
+		&:hover{
+			background: #453C3C;
+		}
+	}
+	svg{
+		width: auto;
+		height: 1.7rem;
+		min-width: 100%;
+		min-height: 1.7rem;
 	}
 }
 
